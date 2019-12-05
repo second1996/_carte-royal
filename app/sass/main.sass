@@ -25,7 +25,11 @@ body
 	overflow-x: hidden
 	color: $text
 	a
+		color: $title
+		text-decoration: none
 		transition: $trs-all
+		&:hover
+			color: $text
 
 .img-responsive
 	display: block
@@ -81,6 +85,8 @@ body
 		margin: 0 auto
 		padding-top: 0
 		text-align: center
+	&-wrap
+		margin-top: 60px
 
 .pt-150
 	padding-top: 150px
@@ -121,15 +127,18 @@ h6
 	font-size: 16px
 h1, h2, h3, h4, h5, h6
 	margin: 0
-	padding-bottom: 15px
+	margin-bottom: 15px
 	color: $title
 	line-height: 1.05em
 	text-transform: uppercase
-
 p
 	margin: 0
 	padding-top: 15px
 	font-weight: 300
+ul
+	margin: 0
+	padding: 0
+	list-style: none
 
 
 // OwlCarousel
@@ -192,3 +201,4 @@ p
 // Pages blocks
 @import "_blocks/home-page/section-heroes"
 @import "_blocks/home-page/section-about-us"
+@import "_blocks/home-page/section-restaurant"
