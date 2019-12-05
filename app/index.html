@@ -19,27 +19,99 @@
 
 <body>
 
-	<!-- Custom HTML / Remove before use -->
-
-	<div class="container">
-
-		<div class="parent"> <!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
-			<img class="lazy img-responsive example-img"
-			src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-			data-src="img/@1x/preview.jpg"
-			data-srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
-			alt="Start HTML5 Template">
+	<header class="s-header">
+		<div class="container">
+			<div class="row justify-content-between align-items-center s-header__wrap">
+				<div class="col-auto s-header_left">
+					<div class="s-header__social">
+						<a href="https://instagram.com" class="s-header__social-link" title="Instagram сторінка" rel="nofollow"><svg class="icon icon-instagram"><use xlink:href="../img/icons/sprite.svg#icon-instagram"></use></svg></a>
+						<a href="https://facebook.com" class="s-header__social-link" title="Facebook спільнота" rel="nofollow"><svg class="icon icon-facebook"><use xlink:href="../img/icons/sprite.svg#icon-facebook"></use></svg></a>
+						<a href="https://youtube.com" class="s-header__social-link" title="YouTube канал" rel="nofollow"><svg class="icon icon-youtube"><use xlink:href="../img/icons/sprite.svg#icon-youtube"></use></svg></a>
+					</div>
+				</div>
+				<div class="col-auto s-header_middle">
+					<ul class="s-header__nav">
+						<li><a href="#">Заклади</a></li>
+						<li><a href="#">Банкетні зали</a></li>
+						<li><a href="#">Кейтеринг</a></li>
+						<li><a href="/"><img src="img/logotype.svg" alt="Carte Royal"></a></li>
+						<li><a href="#">Про нас</a></li>
+						<li><a href="#">Доставка їжі</a></li>
+						<li><a href="#">Контакти</a></li>
+					</ul>
+				</div>
+				<div class="col-auto s-header_right">
+					<a href="#" class="btn">Доставка <svg class="icon icon-delivery"><use xlink:href="../img/icons/sprite.svg#icon-delivery"></use></svg></a>
+				</div>
+			</div>
 		</div>
-		<br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. <em>Ad distinctio animi</em>, dolorum eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia esse dolor repellat.</p>
-		<br>
-		<div class="example-grid">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti, nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-			<div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
-		</div>
+	</header>
 
-	</div>
+	<!-- Start Section: Heroes -->
+	<section class="h-heroes">
+		<div class="owl-carousel h-heroes__carousel">
+			<div class="h-heroes__slide" style="background-image: url('../img/@1x/heroes-photo-01.jpg');">
+				<div class="container">
+					<h1 class="h-heroes__title"><span class="accent-text">Пообідайте з нами</span><br> <small>в Carte Royal</small></h1>
+					<p class="h-heroes__descr">Nulla ac semper nisl. Nunc venenatis commodo arc u, nec imperdiet dui vestibulum id. Duis pulvinar elit enim, ac lacinia ligula sodales ac. Duis tincidunt, arcu a fringilla aliquet, est felis consectetur lorem, eu ornare dui lacus vel lacus. Suspendisse ut tincidunt arcu. Lorem ipsum dolor</p>
+				</div>
+			</div>
+			<div class="h-heroes__slide" style="background-image: url('../img/@1x/heroes-photo-02.jpg');">
+				<div class="container">
+					<h1 class="h-heroes__title"><span class="accent-text">Carte Royal</span><br> <small>Мережа закладів</small></h1>
+					<p class="h-heroes__descr">Nulla ac semper nisl. Nunc venenatis commodo arc u, nec imperdiet dui vestibulum id. Duis pulvinar elit enim, ac lacinia ligula sodales ac.</p>
+				</div>
+			</div>
+		</div>
+		<div class="h-heroes__nav container"></div>
+	</section>
+	<!-- End Section: Heroes -->
+
+	<!-- Start Section: About-us -->
+	<section class="section h-about-us pt-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="h-about-us__text">
+						<h2 class="section-title">Про нас</h2>
+						<p>Carte Royal – це мережа, яка постійно розвивається та прагне бути найкращою у ресторанній сфері. Ми любимо свою роботу та своїх гостей, тому щодня навчаємось і вдосконалюємо якість обслуговування.</p>
+						<p>Carte Royal – це резиденція “Шато Рояль”, ресторація “Буржуй”,  м’ясний клуб Rondel, заміський  сімейний заклад “Fazenfa Family park”, шинок “Калина”, кейтерингова компанія “Vip-SM” та кондитерське ательє “Vanil”.</p>
+						<p>З року в рік ми доводимо, що у на с достатньо амбіцій для того, щоб бути найкращими у ресторанній сфері. Компанія не стоїть на місці, а постійно розвивається. Ми любимо свою роботу та своїх гостей, а ще навчаємось щодня. Без прагнення та пізнання нового, не може бути розвитку. Ми любимо вчитись, подорожувати, осягати нові технології, втілювати здобуті знання та враження у свою роботу для своїх відвідувачів.</p>
+						<div class="row justify-content-between align-items-center mt-15">
+							<div class="col-auto">
+								<a href="#" class="btn">Детальніше</a>
+							</div>
+							<div class="col-auto"><img class="h-about-us__signature" src="img/@2x/about-us-signature.png" alt="Підпис власника Carte Royal"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="h-about-us__photo">
+						<img src="img/@2x/h-about-us-photo.jpg" class="img-responsive" alt="Історія Carte Royal">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Section: About-us -->
+
+	<!-- Start Section: Restaurants -->
+	<section class="section h-restaurants">
+		<div class="container">
+			<h2 class="section-title">Сім’я закладів «Carte Royal»</h2>
+			<p class="section-descr">Carte Royal — мережа, до якої входять резиденція Шато Роял, ресторація Буржуй, м’ясний клуб Rondel, Fazenda family park, шинок Калина, ресторан Vinoteka, кейтерингова компанія VipSM та кондитерське ательє Vanil</p>
+
+			<div class="row">
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Section: Restaurants -->
+
+
+
+
+
 
 	<script src="js/scripts.min.js"></script>
 

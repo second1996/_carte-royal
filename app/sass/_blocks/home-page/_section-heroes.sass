@@ -1,0 +1,89 @@
+@import "vars"
+
+
+.owl-item
+	&.active
+		.h-heroes__title
+			animation-delay: 0.1s
+		.h-heroes__descr
+			animation-delay: 0.3s
+		.h-heroes__title,
+		.h-heroes__descr
+			animation-duration: 0.85s
+			animation-fill-mode: both
+			animation-name: fadeInUp
+
+
+.h-heroes
+	position: relative
+	background: $text
+	&__nav
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		z-index: 1
+		display: flex
+		justify-content: space-between
+		will-change: transform
+		transform: translateY(-50%)
+		button
+			padding: 0
+			background: $trsp
+			border: 0
+			outline: 0
+			&.disabled
+				pointer-events: none
+				opacity: 0.5
+		.owl-prev,
+		.owl-next
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 45px
+			height: 45px
+			border: 1px solid $white
+			color: $white
+			transition: $trs-all
+			&:hover
+				background: $white
+				color: $text
+				cursor: pointer
+			.icon
+				font-size: 18px
+		.owl-prev .icon
+			transform: rotate(90deg)
+		.owl-next .icon
+			transform: rotate(-90deg)
+	&__slide
+		position: relative
+		z-index: 2
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		height: 100vh
+		min-height: 800px
+		background-position: center center
+		background-size: cover
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			background: rgba($text, .65)
+	&__title
+		margin-bottom: 15px
+		color: $white
+		text-align: center
+		text-transform: uppercase
+	&__descr
+		margin-bottom: 30px
+		max-width: 700px
+		margin: 0 auto
+		color: $white
+		font-weight: 300
+		text-align: center
