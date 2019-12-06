@@ -70,6 +70,12 @@ body
 	&:hover
 		background: $text
 		color: $white
+	&-solid
+		background: $text
+		color: $white
+		&:hover
+			background: $trsp
+			color: $text
 
 .section
 	position: relative
@@ -83,6 +89,7 @@ body
 		padding-top: 0
 		text-align: center
 	&-wrap
+		position: relative
 		margin-top: 60px
 
 .pt-150
@@ -121,7 +128,7 @@ h4
 h5
 	font-size: 22px
 h6
-	font-size: 16px
+	font-size: 18px
 h1, h2, h3, h4, h5, h6
 	margin: 0
 	margin-bottom: 15px
@@ -188,11 +195,11 @@ ul
 		.icon
 			font-size: 18px
 	.owl-prev
-		left: 10px
+		left: 0
 		.icon
 			transform: rotate(90deg)
 	.owl-next 
-		right: 10px
+		right: 0
 		.icon
 			transform: rotate(-90deg)
 // Owl Dots

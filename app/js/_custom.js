@@ -34,6 +34,6 @@ $(document).ready(function(){
 		// navSpeed: 0,
 		// dotsSpeed: 0,
 		// animateIn: 'fadeIn',
-		// animateOut: 'fadeOut',
+		animateOut: 'fadeOut',
 	});
 });

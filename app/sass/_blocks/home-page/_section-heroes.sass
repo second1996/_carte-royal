@@ -1,21 +1,24 @@
 @import "vars"
 
-
-.owl-item
-	&.active
-		.h-heroes__title
-			animation-delay: 0.1s
-		.h-heroes__descr
-			animation-delay: 0.3s
-		.h-heroes__title,
-		.h-heroes__descr
-			animation-duration: 0.85s
-			animation-fill-mode: both
-			animation-name: fadeInUp
-
 .h-heroes
 	position: relative
 	background: $text
+	.owl-item
+		&.active
+			.h-heroes__title
+				animation-delay: 0.1s
+			.h-heroes__descr
+				animation-delay: 0.3s
+			.h-heroes__title,
+			.h-heroes__descr
+				animation-duration: 0.85s
+				animation-fill-mode: both
+				animation-name: fadeInUp
+	&__carousel-nav
+		.owl-prev
+			left: 10px
+		.owl-next
+			right: 10px
 	&__slide
 		position: relative
 		z-index: 2
