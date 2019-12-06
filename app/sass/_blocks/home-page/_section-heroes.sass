@@ -13,48 +13,9 @@
 			animation-fill-mode: both
 			animation-name: fadeInUp
 
-
 .h-heroes
 	position: relative
 	background: $text
-	&__nav
-		position: absolute
-		top: 50%
-		left: 0
-		right: 0
-		z-index: 1
-		display: flex
-		justify-content: space-between
-		will-change: transform
-		transform: translateY(-50%)
-		button
-			padding: 0
-			background: $trsp
-			border: 0
-			outline: 0
-			&.disabled
-				pointer-events: none
-				opacity: 0.5
-		.owl-prev,
-		.owl-next
-			display: flex
-			justify-content: center
-			align-items: center
-			width: 45px
-			height: 45px
-			border: 1px solid $white
-			color: $white
-			transition: $trs-all
-			&:hover
-				background: $white
-				color: $text
-				cursor: pointer
-			.icon
-				font-size: 18px
-		.owl-prev .icon
-			transform: rotate(90deg)
-		.owl-next .icon
-			transform: rotate(-90deg)
 	&__slide
 		position: relative
 		z-index: 2
@@ -62,7 +23,7 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		height: 100vh
+		height: calc(100vh - 100px)
 		min-height: 800px
 		background-position: center center
 		background-size: cover

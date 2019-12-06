@@ -1,0 +1,32 @@
+@import "vars"
+
+.catering
+	position: relative
+	z-index: 0
+	padding: 100px 0
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		display: block
+		width: 100%
+		height: 100%
+		background: rgba($white, 0.95)
+	&__logo
+		text-align: center
+	&__title
+		margin-top: 30px
+		margin-bottom: 0
+		text-align: center
+	&__descr
+		max-width: 950px
+		margin: 10px auto 0
+		text-align: center
+	&__btn
+		margin-top: 30px
+		text-align: center

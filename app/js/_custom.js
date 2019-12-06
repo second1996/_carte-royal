@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(document).ready(function(){
-	$(".owl-carousel").owlCarousel({
+	$(".h-heroes__carousel").owlCarousel({
 		items: 1,
 		mouseDrag: false,
 		touchDrag: false,
 		nav: true,
-		navContainer: '.h-heroes__nav',
+		navContainer: '.h-heroes__carousel-nav',
 		navText: [
 			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
 			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
@@ -19,5 +19,21 @@ $(document).ready(function(){
 		// dotsSpeed: 0,
 		// animateIn: 'fadeIn',
 		animateOut: 'fadeOut',
+	});
+	$(".h-delivery__carousel").owlCarousel({
+		items: 1,
+		mouseDrag: false,
+		touchDrag: false,
+		nav: true,
+		navContainer: '.h-delivery__carousel-nav',
+		navText: [
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+		],
+		dots: false,
+		// navSpeed: 0,
+		// dotsSpeed: 0,
+		// animateIn: 'fadeIn',
+		// animateOut: 'fadeOut',
 	});
 });

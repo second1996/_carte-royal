@@ -57,8 +57,7 @@ body
 	color: $accent
 
 .btn
-	display: flex
-	align-items: center
+	display: inline-block
 	padding: 14px 28px
 	background: $trsp
 	border: 1px solid $text
@@ -71,13 +70,11 @@ body
 	&:hover
 		background: $text
 		color: $white
-	.icon
-		margin-left: 8px
-		font-size: 20px
 
 .section
-	padding-top: 75px
-	padding-bottom: 75px
+	position: relative
+	margin-top: 150px
+	margin-bottom: 150px
 	&-title
 		text-align: center
 	&-descr
@@ -132,8 +129,7 @@ h1, h2, h3, h4, h5, h6
 	line-height: 1.05em
 	text-transform: uppercase
 p
-	margin: 0
-	padding-top: 15px
+	margin-top: 15px
 	font-weight: 300
 ul
 	margin: 0
@@ -141,36 +137,65 @@ ul
 	list-style: none
 
 
-// OwlCarousel
-.owl-nav
+// Owl Arrows
+.owl-carousel_nav
 	position: absolute
 	top: 50%
 	left: 0
 	right: 0
-	z-index: 1
-	display: flex
-	justify-content: space-between
-	max-width: 1110px
-	margin: 0 auto
-	will-change: transform
-	transform: translateY(-50%)
+.owl-arrows
+	transition: opacity .3s
+	&:hover
+		opacity: 1
 	button
 		padding: 0
 		background: $trsp
 		border: 0
 		outline: 0
-	.owl-prev span,
-	.owl-next span
+		&.disabled
+			pointer-events: none
+			opacity: 0.5
+	&--light
+		.owl-prev,
+		.owl-next
+			border: 1px solid $white
+			color: $white
+			&:hover
+				background: $white
+				color: $text
+	&--dark
+		.owl-prev,
+		.owl-next
+			border: 1px solid $text
+			color: $text
+			&:hover
+				background: $text
+				color: $white
+	.owl-prev,
+	.owl-next
+		position: absolute
+		top: 50%
+		z-index: 1
 		display: flex
 		justify-content: center
 		align-items: center
 		width: 45px
 		height: 45px
-		border: 1px solid $white
-		color: $white
 		transition: $trs-all
+		margin-top: -25px
 		&:hover
-			display: none
+			cursor: pointer
+		.icon
+			font-size: 18px
+	.owl-prev
+		left: 10px
+		.icon
+			transform: rotate(90deg)
+	.owl-next 
+		right: 10px
+		.icon
+			transform: rotate(-90deg)
+// Owl Dots
 .owl-dots
 	position: absolute
 	left: 0
@@ -202,3 +227,6 @@ ul
 @import "_blocks/home-page/section-heroes"
 @import "_blocks/home-page/section-about-us"
 @import "_blocks/home-page/section-restaurant"
+@import "_blocks/home-page/section-catering"
+@import "_blocks/home-page/section-advantages"
+@import "_blocks/home-page/section-delivery"

@@ -1,11 +1,6 @@
 @import "vars"
 
 .s-header
-	position: absolute
-	left: 0
-	right: 0
-	z-index: 5
-	width: 100%
 	background: $white
 	&__wrap
 		height: 100px
@@ -33,3 +28,12 @@
 				color: $text
 				text-decoration: none
 				text-transform: uppercase
+			&:hover
+				a
+					color: $title
+	&__btn
+		display: inline-flex
+		align-items: center
+		.icon
+			margin-left: 8px
+			font-size: 20px

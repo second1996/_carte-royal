@@ -56,7 +56,7 @@ gulp.task('scripts', function() {
 });
 
 // Responsive Images
-var quality = 95; // Responsive images quality
+var quality = 70; // Responsive images quality
 
 // Produce @1x images
 gulp.task('img-responsive-1x', async function() {
