@@ -27,7 +27,7 @@
 		justify-content: center
 		align-items: center
 		height: calc(100vh - 100px)
-		min-height: 800px
+		min-height: 650px
 		background-position: center center
 		background-size: cover
 		&:before
@@ -39,6 +39,9 @@
 			bottom: 0
 			z-index: -1
 			background: rgba($text, .65)
+	&__wrap
+		max-width: 700px
+		margin: 0 auto
 	&__title
 		margin-bottom: 15px
 		color: $white
@@ -46,8 +49,6 @@
 		text-transform: uppercase
 	&__descr
 		margin-bottom: 30px
-		max-width: 700px
-		margin: 0 auto
 		color: $white
 		font-weight: 300
 		text-align: center

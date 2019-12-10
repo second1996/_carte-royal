@@ -1,0 +1,162 @@
+@import "vars"
+
+// /*==========  Desktop First  ==========*/
+
+// ≥992px
++media-breakpoint-down(lg)
+	.s-header
+		&__left,
+		&__right
+			max-width: 160px
+		&__humb
+			display: flex
+			align-items: center
+			height: 20px
+			padding: 0
+			border: 0
+			background: $trsp
+			outline: 0
+			&-icon
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				width: 30px
+				height: 20px
+				&:hover
+					cursor: pointer
+				span
+					display: block
+					width: 30px
+					height: 2px
+					background: $text
+			&-title
+				margin-top: 2px
+				margin-left: 10px
+				text-transform: uppercase
+				color: $title
+				font-size: 14px
+				line-height: 1
+		&__left
+			display: flex
+			align-items: center
+		&__social
+			margin-left: 15px
+			&-link
+				margin-right: 10px
+		&__menu-left,
+		&__menu-right,
+		&__nav li:not(.s-header__nav-logo)
+			display: none
+	.h-restaurants
+		&__item
+			height: 360px
+		&__photo
+			height: 210px
+		&__meta
+			padding: 30px
+		&__title
+			font-size: 20px
+	.h-delivery
+		&__photo
+			max-width: 440px
+		&__header
+			top: 30px
+			&-btn
+				margin-top: 150px
+		&__meta
+			top: 50%
+			max-width: 300px
+
+
+
+// ≥768px
++media-breakpoint-down(md)
+	h1
+		font-size: 46px
+	h2
+		font-size: 38px
+	.pt-150
+		padding-top: 100px
+	.section
+		margin-top: 100px
+		margin-bottom: 100px
+		&-wrap
+			margin-top: 45px
+		&-title
+			font-size: 38px
+	.s-header
+		&__wrap
+			height: 70px
+		&__middle
+			flex-basis: 100px
+		&__btn
+			padding: 10px 16px
+	.h-heroes
+		&__wrap
+			max-width: 500px
+	.h-about-us
+		&__text
+			margin-right: 0
+		&__photo
+			display: none
+	.h-restaurants
+		&__item
+			height: 400px
+		&__photo
+			height: 180px
+		&__meta
+			transform: none
+
+
+
+// ≥576px
++media-breakpoint-down(sm)
+	h1
+		font-size: 42px
+	h2
+		font-size: 32px
+	.pt-150
+		padding-top: 75px
+	.section
+		margin-top: 75px
+		margin-bottom: 75px
+		&-title
+			font-size: 32px
+	.h-heroes
+		.owl-carousel_nav
+			display: none
+	.h-restaurants
+		&__contacts
+			&-phone
+				a
+					display: block
+					margin-top: 5px
+					margin-right: 0
+					&:first-child
+						margin-top: 0
+	.catering
+		padding: 75px 0
+
+
+// ≥0px
++media-breakpoint-down(xs)
+	h1
+		font-size: 36px
+	h2
+		font-size: 26px
+	.section
+		&-title
+			font-size: 26px
+	.s-header
+		&__left
+			justify-content: flex-end
+		&__social
+			margin-right: 15px
+		&__middle
+			flex-basis: 90px
+		&__btn
+			display: none
+
+
+// @media only screen and (max-width: 425px)
+// @media (orientation:landscape) and (max-height: 600px)
