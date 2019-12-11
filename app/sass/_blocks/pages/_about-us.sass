@@ -1,0 +1,75 @@
+@import vars
+
+.about-us-page
+	.h-about-us
+		&__img
+			position: relative
+			margin-top: -45px
+	.h-advantages
+		[class*="col-"]:nth-last-child(-n+4)
+			margin-bottom: 0
+		&__item
+			margin-bottom: 45px
+	.reviews
+		.owl-carousel_nav
+			top: 55%
+		.owl-arrows
+			.owl-prev
+				left: 10px
+			.owl-next
+				right: 10px
+		.owl-item:nth-child(3n+1)
+			.reviews__slide
+				background: $white url('../img/@2x/bg-element-01.png') no-repeat center
+		.owl-item:nth-child(3n+2)
+			.reviews__slide
+				background: $white url('../img/@2x/bg-element-02.png') no-repeat center
+		.owl-item:nth-child(3n+3)
+			.reviews__slide
+				background: $white url('../img/@2x/bg-element-03.png') no-repeat center
+		&__carousel
+			max-width: 1120px
+			margin: 60px auto 0
+		&__slide
+			border: 1px solid $border
+			background: $white
+			min-height: 232px
+		// .owl-stage
+		// 	display: flex
+		// .owl-item 
+		// 	display: flex
+		// 	flex: 1
+		// .owl-stage
+		// 	display: flex
+		// 	flex-wrap: wrap
+		// .owl-item
+		// 	display: flex
+		// 	height: auto !important
+	.review
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 30px
+		&:after
+			content: ''
+			position: absolute
+			top: 30px
+			right: 30px
+			z-index: 1
+			display: block
+			width: 25px
+			height: 25px
+			background: url('../img/icons/quote.svg') no-repeat center/100%
+		&__title
+			color: $title
+			font-size: 22px
+		&__place
+			color: rgba($text, 0.5)
+			font-size: 14px
+		&__text
+			margin-top: 15px
+			text-align: center
+			p
+				margin-top: 5px
+				margin-bottom: 0

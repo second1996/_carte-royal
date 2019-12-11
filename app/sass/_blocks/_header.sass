@@ -2,12 +2,12 @@
 
 .s-header
 	position: relative
+	border-bottom: 1px solid $border
 	background: $white
 	&__wrap
 		position: relative
 		z-index: 10
 		height: 100px
-		border-bottom: 1px solid $border
 	&__humb
 		display: none
 	&__social
@@ -60,10 +60,11 @@
 	.m-nav
 		visibility: hidden
 		position: absolute
-		top: 100px
+		top: 101px
 		left: 0
 		right: 0
 		z-index: 9
+		border-bottom: 1px solid $border
 		background: inherit
 		transform: translate3d(0,-100px,0)
 		opacity: 0

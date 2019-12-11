@@ -76,6 +76,11 @@ body
 	position: relative
 	margin-top: 150px
 	margin-bottom: 150px
+	&-gray
+		margin-top: 0
+		margin-bottom: 0
+		padding: 150px 0
+		background: #f9f9f9
 	&-title
 		font-size: 48px
 		text-align: center
@@ -150,6 +155,8 @@ ul
 	transition: opacity .3s
 	&:hover
 		opacity: 1
+	&.disabled
+		display: none
 	button
 		padding: 0
 		background: $trsp
@@ -157,7 +164,7 @@ ul
 		outline: 0
 		&.disabled
 			pointer-events: none
-			opacity: 0.5
+			opacity: 0.15
 	&--light
 		.owl-prev,
 		.owl-next
@@ -200,11 +207,7 @@ ul
 			transform: rotate(-90deg)
 // Owl Dots
 .owl-dots
-	position: absolute
-	left: 0
-	right: 0
-	bottom: 60px
-	z-index: 3
+	margin-top: 30px
 	text-align: center
 	.owl-dot
 		width: 15px
@@ -216,23 +219,40 @@ ul
 			width: 100%
 			height: 100%
 			border: 1px solid $white
-			transition: $trs-all
+			transition: background-color .3s
+		&:hover
+			span
+				background: $white
 		&.active
 			span
 				background: $white
+	&--dark
+		.owl-dot
+			span
+				border-color: #ccc
+			&.active
+				span
+					background: $text
+			&:hover
+				span
+					background: #ccc
 
 
 
 // Main blocks
+@import "_blocks/page"
 @import "_blocks/header"
 
-// Pages blocks
+// Home blocks
 @import "_blocks/home-page/section-heroes"
 @import "_blocks/home-page/section-about-us"
 @import "_blocks/home-page/section-restaurant"
 @import "_blocks/home-page/section-catering"
 @import "_blocks/home-page/section-advantages"
 @import "_blocks/home-page/section-delivery"
+
+// Other pages
+@import "_blocks/pages/about-us"
 
 // Media queries
 @import media

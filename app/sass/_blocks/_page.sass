@@ -1,0 +1,56 @@
+@import vars
+	
+.p-heroes
+	&__bc
+	.breadcrumbs
+		padding: 15px 0
+		&__list
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			li
+				color: #c9c9c9
+				font-size: 14px
+				text-transform: uppercase
+				&:after
+					content: '/'
+					display: inline-block
+					padding: 0 10px
+					color: #c9c9c9
+				&:last-child
+					&:after
+						display: none
+				a
+					color: $text
+					&:hover
+						color: $title
+	&__wrap
+		position: relative
+		z-index: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		height: 250px
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			background: rgba($text, 0.65)
+	&__title
+		margin-bottom: 5px
+		color: $white
+		text-align: center
+	&__brand
+		display: block
+		color: $accent
+		font-size: 18px
+		text-align: center
+		text-transform: uppercase

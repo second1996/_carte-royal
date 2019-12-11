@@ -35,10 +35,32 @@ $(document).ready(function(){
 		dots: false,
 		animateOut: 'fadeOut',
 	});
+	$(".reviews__carousel").owlCarousel({
+		margin: 20,
+		mouseDrag: false,
+		touchDrag: false,
+		nav: true,
+		navContainer: '.reviews__carousel-nav',
+		navText: [
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+		],
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			}
+		},
+	});
+
+
 
 	// Mobile navigation
 	var mNavHumb	= $('.s-header__humb');
 			mNav			= $('.m-nav');
+
 	mNavHumb.on('click', function() {
 		mNav.toggleClass('is-active');
 	});
