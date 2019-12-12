@@ -38,7 +38,7 @@ $(document).ready(function(){
 	$(".reviews__carousel").owlCarousel({
 		margin: 20,
 		mouseDrag: false,
-		touchDrag: false,
+		touchDrag: true,
 		nav: true,
 		navContainer: '.reviews__carousel-nav',
 		navText: [

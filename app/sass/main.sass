@@ -49,6 +49,13 @@ body
 
 .accent-text
 	color: $accent
+.text-left
+	text-align: left!important
+.text-center
+	text-align: center!important
+.m-a
+	margin-left: auto
+	margin-right: auto
 
 .btn
 	display: inline-block
@@ -58,8 +65,10 @@ body
 	color: $text
 	font-size: 12px
 	line-height: 1
+	text-align: center
 	text-decoration: none
 	text-transform: uppercase
+	white-space: nowrap
 	outline: 0
 	transition: background-color .3s
 	&:hover
@@ -77,8 +86,8 @@ body
 	margin-top: 150px
 	margin-bottom: 150px
 	&-gray
-		margin-top: 0
-		margin-bottom: 0
+		margin-top: 0!important
+		margin-bottom: 0!important
 		padding: 150px 0
 		background: #f9f9f9
 	&-title
@@ -253,6 +262,7 @@ ul
 
 // Other pages
 @import "_blocks/pages/about-us"
+@import "_blocks/pages/contacts"
 
 // Media queries
 @import media
