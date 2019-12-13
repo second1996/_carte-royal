@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 $(document).ready(function(){
 	$(".h-heroes__carousel").owlCarousel({
 		items: 1,
+		lazyLoad: true,
 		mouseDrag: false,
 		touchDrag: false,
 		nav: true,
@@ -54,8 +55,30 @@ $(document).ready(function(){
 			}
 		},
 	});
-
-
+	$(".family__carousel").owlCarousel({
+		items: 5,
+		margin: 10,
+		lazyLoad: true,
+		mouseDrag: false,
+		// touchDrag: true,
+		nav: true,
+		dots: false,
+		navText: [
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+		],
+		responsive: {
+			0: {
+				items: 2
+			},
+			576: {
+				items: 3
+			},
+			992: {
+				items: 5
+			}
+		},
+	});
 
 	// Mobile navigation
 	var mNavHumb	= $('.s-header__humb');
@@ -63,5 +86,16 @@ $(document).ready(function(){
 
 	mNavHumb.on('click', function() {
 		mNav.toggleClass('is-active');
+	});
+
+	// Fancybox
+	$('[data-fancybox="gallery"]').fancybox({
+		// Options will go here
+	});
+
+	// jQuery Lazyload
+	$(".lazyload").lazyload({
+		effect : "fadeIn",
+		data_attribute : "src"
 	});
 });

@@ -1,0 +1,102 @@
+@import vars
+
+.family-page
+	.family
+		&__item
+			padding: 45px 0
+			border-top: 1px solid $border
+		&__title
+			font-size: 22px
+			font-weight: 400
+		&__contacts
+			margin-bottom: 20px
+			&-list
+				display: flex
+				flex-wrap: wrap
+				li
+					display: flex
+					margin-right: 30px
+					margin-bottom: 12px
+					line-height: 1
+					&:last-child
+						margin-right: 0
+					span
+						display: inline-block
+						font-weight: 300
+						a
+							margin-right: 4px
+							&:after
+								content: ','
+								display: inline-block
+							&:last-child:after
+								display: none
+			&-icon
+				display: inline-block
+				vertical-align: middle
+				width: 18px
+				height: 18px
+				margin-right: 6px
+				.icon
+					font-size: 16px
+		&__gallery
+			position: relative
+			margin-bottom: 20px
+			.owl-nav
+				position: absolute
+				top: 50%
+				left: 0
+				right: 0
+				transition: opacity .3s
+				&:hover
+					opacity: 1
+				&.disabled
+					display: none
+				button
+					padding: 0
+					background: $white
+					border: 0
+					outline: 0
+					border: 1px solid $border
+					color: $text
+					&:hover
+						background: $text
+						border-color: $text
+						color: $white
+					&.disabled
+						opacity: 0
+				.owl-prev,
+				.owl-next
+					position: absolute
+					top: 50%
+					z-index: 1
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 45px
+					height: 45px
+					transition: $trs-all
+					margin-top: -25px
+					&:hover
+						cursor: pointer
+					.icon
+						font-size: 18px
+				.owl-prev
+					left: 45px
+					.icon
+						transform: rotate(90deg)
+				.owl-next 
+					right: 45px
+					.icon
+						transform: rotate(-90deg)
+		&__photo
+			display: block
+			max-height: 176px
+			img
+				display: block
+				height: 100%
+				max-height: 176px
+		&__descr
+			p
+				margin: 0
+				padding-right: 15px
+				text-align: justify
