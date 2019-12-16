@@ -39,6 +39,44 @@ body
 	max-width: 100%
 	height: auto
 
+// Lazyload
+img.lazy
+	filter: opacity(0)
+img.lazy:not(.initial)
+	transition: filter 1s
+img.initial,
+img.loaded,
+img.error
+	filter: opacity(1)
+img.lazy:not([src]):not([srcset])
+	visibility: hidden
+@-moz-document url-prefix()
+	img:-moz-loading
+		visibility: hidden
+
+[data-loader="spinner"]:before
+	content: ''
+	position: absolute
+	top: 50%
+	left: 50%
+	z-index: 0
+	display: inline-block
+	height: 32px
+	width: 32px
+	margin-top: -16px
+	margin-left: -16px
+	border: 3px solid
+	border-top-color: transparent
+	border-radius: 50%
+	color: #ccc
+	animation: rotate 1s linear infinite
+@keyframes rotate
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+
+
 .icon
 	display: inline-block
 	width: 1em
@@ -265,6 +303,7 @@ ul
 @import "_blocks/pages/about-us"
 @import "_blocks/pages/contacts"
 @import "_blocks/pages/family"
+@import "_blocks/pages/catering"
 
 // Media queries
 @import media

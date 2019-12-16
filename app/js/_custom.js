@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// Custom JS
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy",
+		threshold: 0,
+	});
+
+	var lazyLoadInstances = new LazyLoad({
+		elements_selector: ".lazyload",
+		threshold: 0,
+	});
 
 });
 
@@ -94,8 +102,8 @@ $(document).ready(function(){
 	});
 
 	// jQuery Lazyload
-	$(".lazyload").lazyload({
-		effect : "fadeIn",
-		data_attribute : "src"
-	});
+	// $(".lazyload").lazyload({
+	// 	data_attribute : "src",
+	// 	effect : "fadeIn",
+	// });
 });

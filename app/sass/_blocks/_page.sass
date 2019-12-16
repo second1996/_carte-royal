@@ -1,29 +1,29 @@
 @import vars
-	
-.p-heroes
-	&__bc
-	.breadcrumbs
-		padding: 15px 0
-		&__list
-			display: flex
-			flex-wrap: wrap
-			align-items: center
-			li
+
+.breadcrumbs
+	padding: 15px 0
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		li
+			color: #c9c9c9
+			font-size: 14px
+			text-transform: uppercase
+			&:after
+				content: '/'
+				display: inline-block
+				padding: 0 10px
 				color: #c9c9c9
-				font-size: 14px
-				text-transform: uppercase
+			&:last-child
 				&:after
-					content: '/'
-					display: inline-block
-					padding: 0 10px
-					color: #c9c9c9
-				&:last-child
-					&:after
-						display: none
-				a
-					color: $text
-					&:hover
-						color: $title
+					display: none
+			a
+				color: $text
+				&:hover
+					color: $title
+
+.p-heroes
 	&__wrap
 		position: relative
 		z-index: 0
@@ -54,3 +54,92 @@
 		font-size: 18px
 		text-align: center
 		text-transform: uppercase
+
+.f-heroes
+	&__wrap
+		position: relative
+		z-index: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		height: calc(100vh - 152px)
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			background: rgba($text, 0.65)
+	&__header
+		margin-top: -100px
+	&__title
+		margin-bottom: 15px
+		color: $white
+		text-align: center
+	&__descr
+		max-width: 900px
+		margin: 0 auto
+		color: $white
+		text-align: center
+	&__info
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		margin: 0 auto
+		.navigation
+			margin-bottom: 25px
+			text-align: center
+			&__list
+				display: flex
+				align-items: center
+				justify-content: center
+				li
+					margin: 0 5px
+					border-bottom: 2px solid $trsp
+					transition: border .3s
+					&:hover
+						border-bottom-color: $white
+					a
+						display: block
+						padding: 0 10px 5px
+						color: $white
+						font-weight: 700
+						text-transform: uppercase
+		.contacts
+			padding: 25px 0
+			background: #323232
+			&__item
+				display: flex
+				margin: 0 35px
+			&__icon
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 46px
+				min-width: 46px
+				height: 46px
+				background: $white
+				.icon
+					fill: $text
+			&__meta
+				display: flex
+				flex-direction: column
+				margin-left: 20px
+				&-title
+					color: $white
+				&-descr
+					color: #fff
+					font-weight: 300
+				&-phone a,
+				&-email a
+					color: $white
+					font-weight: 300
+					&:hover
+						color: $accent
