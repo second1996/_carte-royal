@@ -35,11 +35,11 @@
 			li
 				position: relative
 				padding-left: 35px
-				margin-bottom: 45px
+				margin-top: 45px
 				font-weight: 300
 				line-height: 1.4em
-				&:nth-last-child(-n+4)
-					margin-bottom: 0
+				&:nth-child(-n+4)
+					margin-top: 0
 				&:before
 					content: counter(item, decimal-leading-zero)
 					counter-increment: item
@@ -67,13 +67,13 @@
 				bottom: 0
 				z-index: -1
 				background: rgba($text, 0.75)
-		[class*="col-"]:nth-last-child(-n+6)
-			.format__item
-				margin-bottom: 0
 		&__item
 			display: flex
 			align-items: center
-			margin-bottom: 45px
+			margin-top: 45px
+		[class*="col-"]:nth-child(-n+6)
+			.format__item
+				margin-top: 0
 		&__icon
 			width: 30px
 			height: 30px
@@ -86,3 +86,139 @@
 			font-weight: 300
 			line-height: 1
 			text-transform: uppercase
+	.services
+		&__list
+			counter-reset: item
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				position: relative
+				padding-left: 35px
+				margin-top: 45px
+				font-weight: 300
+				&:nth-child(-n+4)
+					margin-top: 0
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					display: inline-block
+					width: 20px
+					height: 20px
+					background: url('../img/icons/check-accent.svg')
+					background-size: cover
+	.events
+		background: $text
+		.section-title
+			color: $white
+		.section-descr
+			max-width: 65%
+			margin: 0
+			color: $white
+			text-align: left
+		&__carousel
+			// position: relative
+			.owl-nav
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				transition: opacity .3s
+				&:hover
+					opacity: 1
+				&.disabled
+					display: none
+				button
+					padding: 0
+					background: $trsp
+					border: 0
+					outline: 0
+					border: 1px solid #4f4f4f
+					color: $text
+					&:hover
+						border-color: $white
+					&.disabled
+						pointer-events: none
+						opacity: 0.25
+						&:hover
+							border-color: #4f4f4f
+				.owl-prev,
+				.owl-next
+					position: absolute
+					top: -105px
+					z-index: 1
+					display: inline-block
+					width: 112px
+					height: 45px
+					color: $white
+					font-size: 12px
+					font-weight: 300
+					line-height: 1
+					text-transform: uppercase
+					transition: $trs-all
+					&:hover
+						cursor: pointer
+					.icon
+						font-size: 18px
+				.owl-prev
+					right: 127px
+					.icon
+						transform: rotate(90deg)
+				.owl-next 
+					right: 0
+					.icon
+						transform: rotate(-90deg)
+		&__slide
+			position: relative
+			z-index: 0
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 425px
+			padding: 45px
+			border: 1px solid #4f4f4f
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+			color: $white
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: -1
+				display: block
+				width: 100%
+				height: 100%
+				background: linear-gradient(90deg, rgba(50, 50, 50, 0.95) 0%, rgba(50, 50, 50, 0.85) 45.83%, rgba(50, 50, 50, 0) 100%)
+		&__title
+			color: $white
+			font-size: 22px
+		&__info
+			&-item
+				display: flex
+				margin-bottom: 5px
+				&:last-child
+					margin-bottom: 0
+			&-icon
+				width: 18px
+				height: 18px
+				.icon
+					fill: $accent
+					font-size: 16px
+			&-descr
+				margin-left: 10px
+				font-size: 15px
+				font-weight: 300
+				line-height: 1.3em
+				b
+					font-weight: 400
+		&__gallery
+			&-item
+				display: none
+				&:first-child
+					display: inline-block

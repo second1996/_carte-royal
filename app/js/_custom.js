@@ -87,6 +87,28 @@ $(document).ready(function(){
 			}
 		},
 	});
+	$(".events__carousel").owlCarousel({
+		// loop: true,
+		margin: 20,
+		// center: true,
+		// startPosition: 1,
+		mouseDrag: false,
+		touchDrag: true,
+		dots: false,
+		nav: true,
+		navText: [
+			'Попередня',
+			'Наступна'
+		],
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			}
+		},
+	});
 
 	// Mobile navigation
 	var mNavHumb	= $('.s-header__humb');

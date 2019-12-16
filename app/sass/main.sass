@@ -3,7 +3,8 @@
 @import libs
 
 ::placeholder
-	color: #666
+	color: rgba($text, 0.75)
+	font-size: 15px
 
 ::selection
 	background-color: $accent
@@ -20,7 +21,7 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.5
+	line-height: 1.5em
 	font-family: 'Roboto', sans-serif
 	overflow-x: hidden
 	color: $text
@@ -110,13 +111,19 @@ img.lazy:not([src]):not([srcset])
 	outline: 0
 	transition: background-color .3s
 	&:hover
-		background: $text
+		background-color: $text
 		color: $white
 	&-solid
-		background: $text
+		background-color: $text
 		color: $white
 		&:hover
-			background: $trsp
+			background-color: $trsp
+			color: $text
+	&-white
+		border-color: $white
+		color: $white
+		&:hover
+			background-color: $white
 			color: $text
 
 .section
