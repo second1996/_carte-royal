@@ -14,6 +14,7 @@
 	<meta property="og:image" content="img/@1x/preview.jpg">
 	
 	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" href="libs/ion.rangeSlider/ion.rangeSlider.min.css">
 
 </head>
 
@@ -100,11 +101,11 @@
 				<div class="f-heroes__info">
 					<div class="navigation">
 						<ul class="navigation__list">
-							<li><a href="#about">Про нас</a></li>
-							<li><a href="#format">Формати</a></li>
-							<li><a href="#advantages">Переваги</a></li>
-							<li><a href="#events">Останні події</a></li>
-							<li><a href="#order">Замовити послугу</a></li>
+							<li><a href="#about" data-link="anchor">Про нас</a></li>
+							<li><a href="#skills" data-link="anchor">Переваги</a></li>
+							<li><a href="#format" data-link="anchor">Формати</a></li>
+							<li><a href="#events" data-link="anchor">Останні події</a></li>
+							<li><a href="#order" data-link="anchor">Замовити послугу</a></li>
 						</ul>
 					</div><!-- /.navigation -->
 					<div class="contacts">
@@ -152,7 +153,7 @@
 		<!-- End Section: Page title -->
 
 		<!-- Start Section: About-us -->
-		<section class="section about-us">
+		<section class="section about-us" id="about">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
@@ -174,7 +175,7 @@
 		<!-- End Section: About-us -->
 
 		<!-- Start Section: Skills -->
-		<section class="section skills">
+		<section class="section skills" id="skills">
 			<div class="container">
 				<h2 class="section-title">Наші можливості</h2>
 				<p class="section-descr">Нашою особливістю є виняткова мобільність, нескінчена різноманітність кухні та комплексність послуг, професійний та якісний підхід до організації та проведення заходів будь-якого формату</p>
@@ -306,7 +307,7 @@
 		<!-- End Section: Format -->
 
 		<!-- Start Section: Services -->
-		<section class="section services">
+		<section class="section services" id="services">
 			<div class="container">
 				<h2 class="section-title">Додаткові послуги</h2>
 				<p class="section-descr">Нашою особливістю є виняткова мобільність, нескінчена різноманітність кухні та комплексність послуг, професійний та якісний підхід до організації та проведення заходів будь-якого формату</p>
@@ -328,7 +329,7 @@
 		<!-- End Section: Services -->
 
 		<!-- Start Section: Events -->
-		<section class="section section-gray events">
+		<section class="section section-gray events" id="events">
 			<div class="container">
 				<h2 class="section-title text-left">Останні події</h2>
 				<p class="section-descr">Події, які організовала наша кейтерингова компанія “VIP-SM”</p>
@@ -359,8 +360,8 @@
 							</ul>
 						</div>
 						<div class="events__gallery">
-							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="events" class="events__gallery-item btn btn-white">Переглянути фото</a>
-							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="events" class="events__gallery-item"></a>
+							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="c-events-1" class="events__gallery-item btn btn-white">Переглянути фото</a>
+							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="c-events-1" class="events__gallery-item"></a>
 						</div>
 					</div><!-- /.evets__slide -->
 					<div class="events__slide lazy" data-bg="url(https://vipcatering.com.ua/assets/images/16-08-2019/uzfmb3-porfolio-4.jpg)">
@@ -388,8 +389,8 @@
 							</ul>
 						</div>
 						<div class="events__gallery">
-							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/t0dm7q-pimg2-1.jpg" data-fancybox="events-2" class="events__gallery-item btn btn-white">Переглянути фото</a>
-							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/t0dm7q-pimg2-1.jpg" data-fancybox="events-2" class="events__gallery-item"></a>
+							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/t0dm7q-pimg2-1.jpg" data-fancybox="c-events-2" class="events__gallery-item btn btn-white">Переглянути фото</a>
+							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/t0dm7q-pimg2-1.jpg" data-fancybox="c-events-2" class="events__gallery-item"></a>
 						</div>
 					</div><!-- /.evets__slide -->
 					<div class="events__slide lazy" data-bg="url(https://vipcatering.com.ua/assets/images/16-08-2019/y9jpfn-porfolio-1.jpg)">
@@ -417,8 +418,8 @@
 							</ul>
 						</div>
 						<div class="events__gallery">
-							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="events-3" class="events__gallery-item btn btn-white">Переглянути фото</a>
-							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="events-3" class="events__gallery-item"></a>
+							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="c-events-3" class="events__gallery-item btn btn-white">Переглянути фото</a>
+							<a href="https://vipcatering.com.ua/assets/images/16-08-2019/7qjz9c-pimg2-2.jpg" data-fancybox="c-events-3" class="events__gallery-item"></a>
 						</div>
 					</div><!-- /.evets__slide -->
 				</div>
@@ -427,25 +428,99 @@
 		<!-- End Section: Events -->
 
 		<!-- Start Section: Order -->
-		<section class="section order">
+		<section class="section order" id="order">
 			<div class="container">
 				<h2 class="section-title">Калькулятор кейтерингу</h2>
 				<div class="section-wrap">
 					<form action="#" method="POST" class="order__form form">
 						<div class="row">
-							<div class="col-6">
-								<input type="text" class="form-control form-control_icon form-control_icon-name" name="order-name" placeholder="Ваше ім&#39;я">
+							<div class="form-group col-6">
+								<input type="text" class="form-control form-control-icon icon-name" name="order-name" placeholder="Ваше ім&#39;я">
 							</div>
-							<div class="col-6">
-								<input type="tel" class="form-control form-control_icon form-control_icon-phone" name="order-phone" placeholder="Номер телефону">
+							<div class="form-group col-6">
+								<input type="tel" class="form-control form-control-icon icon-phone" name="order-phone" placeholder="Номер телефону">
 							</div>
-							<div class="col-6">
-								<input type="text" class="form-control form-control_icon form-control_icon-date" name="order-name" placeholder="Дата проведення">
+							<div class="form-group col-6">
+								<input type="text" class="form-control form-control-icon icon-date" name="order-name" placeholder="Дата проведення">
 							</div>
-							<div class="col-6">
-								<input type="tel" class="form-control form-control_icon form-control_icon-guests" name="order-phone" placeholder="Кількість гостей">
+							<div class="form-group col-6">
+								<input type="tel" class="form-control form-control-icon icon-guests" name="order-phone" placeholder="Кількість гостей">
 							</div>
-						</div>
+							<div class="form-group col-6">
+								<div class="form-title">Формат заходу</div>
+								<div class="form-check">
+									<div class="row">
+										<div class="col-6">
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-1" value="Фуршет" checked>
+											<label class="form-check-label" for="order-format-1">Фуршет</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-2" value="Бенкет">
+											<label class="form-check-label" for="order-format-2">Бенкет</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-3" value="Бенкет">
+											<label class="form-check-label" for="order-format-3">Селянський стіл</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-4" value="Бенкет">
+											<label class="form-check-label" for="order-format-4">Шведський стіл</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-5" value="Бенкет">
+											<label class="form-check-label" for="order-format-5">Бізнес сніданок</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-6" value="Бенкет">
+											<label class="form-check-label" for="order-format-6">Coffee-пауза</label>
+										</div><!-- /.col -->
+										<div class="col-6">
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-7" value="Фуршет" checked>
+											<label class="form-check-label" for="order-format-7">BBQ або пікнік</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-8" value="Бенкет">
+											<label class="form-check-label" for="order-format-8">Корпоратив</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-9" value="Бенкет">
+											<label class="form-check-label" for="order-format-9">Бранч</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-10" value="Бенкет">
+											<label class="form-check-label" for="order-format-10">Конференція</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-11" value="Бенкет">
+											<label class="form-check-label" for="order-format-11">Презентація</label>
+											<input class="form-check-input" type="radio" name="order-format[]" id="order-format-12" value="Бенкет">
+											<label class="form-check-label" for="order-format-12">Ювілей</label>
+										</div><!-- /.col -->
+									</div><!-- /.row -->
+								</div><!-- /.form-check -->
+							</div><!-- /.form-group -->
+							<div class="form-group col-3">
+								<div class="form-title">Страви</div>
+								<div class="form-radio">
+									<input class="form-radio-input" type="checkbox" name="order-dishes[]" id="order-dishes-1" value="Канапе" checked>
+									<label class="form-radio-label" for="order-dishes-1">Канапе</label>
+									<input class="form-radio-input" type="checkbox" name="order-dishes[]" id="order-dishes-2" value="Холодні закуски">
+									<label class="form-radio-label" for="order-dishes-2">Холодні закуски</label>
+									<input class="form-radio-input" type="checkbox" name="order-dishes[]" id="order-dishes-3" value="Салати">
+									<label class="form-radio-label" for="order-dishes-3">Салати</label>
+									<input class="form-radio-input" type="checkbox" name="order-dishes[]" id="order-dishes-4" value="Гарячі страви">
+									<label class="form-radio-label" for="order-dishes-4">Гарячі страви</label>
+									<input class="form-radio-input" type="checkbox" name="order-dishes[]" id="order-dishes-5" value="Десерти">
+									<label class="form-radio-label" for="order-dishes-5">Десерти</label>
+								</div><!-- /.form-radio -->
+							</div><!-- /.form-group -->
+							<div class="form-group col-3">
+								<div class="form-title">Напої</div>
+								<div class="form-radio">
+									<input class="form-radio-input" type="checkbox" name="order-drinks[]" id="order-drinks-1" value="Безалкогольні напої" checked>
+									<label class="form-radio-label" for="order-drinks-1">Безалкогольні напої</label>
+									<input class="form-radio-input" type="checkbox" name="order-drinks[]" id="order-drinks-2" value="Алкоголь">
+									<label class="form-radio-label" for="order-drinks-2">Алкоголь</label>
+									<input class="form-radio-input" type="checkbox" name="order-drinks[]" id="order-drinks-3" value="Гарячі напої">
+									<label class="form-radio-label" for="order-drinks-3">Гарячі напої</label>
+								</div><!-- /.form-radio -->
+							</div><!-- /.form-group -->
+							<div class="form-group col-12">
+								<div class="form-title text-center">Бажаний бюджет</div>
+								<div class="form-range" id="order-slider">
+									<input class="form-range-slider"
+									type="range"
+									data-min="0"
+									data-max="100000"
+									data-from="50000"
+									data-step="500"
+									data-postfix=" грн"
+									data-grid="true">
+								</div>
+							</div><!-- /.form-group -->
+						</div><!-- /.row -->
 					</form>
 				</div>
 			</div>
@@ -458,6 +533,7 @@
 
 
 	<script src="js/scripts.min.js"></script>
+	<script src="libs/ion.rangeSlider/ion.rangeSlider.min.js"></script>
 
 </body>
 </html>

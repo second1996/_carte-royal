@@ -5,11 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		threshold: 0,
 	});
 
-	var lazyLoadInstances = new LazyLoad({
-		elements_selector: ".lazyload",
-		threshold: 0,
-	});
-
 });
 
 $(document).ready(function(){
@@ -123,9 +118,16 @@ $(document).ready(function(){
 		// Options will go here
 	});
 
-	// jQuery Lazyload
-	// $(".lazyload").lazyload({
-	// 	data_attribute : "src",
-	// 	effect : "fadeIn",
-	// });
+	// Anchors Links
+	$('a[data-link^="anchor"]').bind('click.smoothscroll', function(){
+		var target = $(this).attr('href'),
+				bl_top = $(target).offset().top - 75;
+		$('body, html').animate({scrollTop: bl_top}, 1000);
+		return false;
+	});
+	
+	$(".form-range-slider").ionRangeSlider({
+		skin: "round"
+	});
+
 });
