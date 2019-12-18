@@ -111,10 +111,11 @@ img.lazy:not([src]):not([srcset])
 	text-transform: uppercase
 	white-space: nowrap
 	outline: 0
-	transition: background-color .3s
+	transition: background-color .3s, border-color .3s
 	&:hover
 		background-color: $text
 		color: $white
+		cursor: pointer
 	&-solid
 		background-color: $text
 		color: $white
@@ -127,6 +128,12 @@ img.lazy:not([src]):not([srcset])
 		&:hover
 			background-color: $white
 			color: $text
+	&-accent
+		border-color: #e1b000
+		background-color: $accent
+		color: $title
+		&:hover
+			border-color: $text
 
 .section
 	position: relative

@@ -3,11 +3,9 @@
 .h-heroes
 	position: relative
 	background: $text
-	height: calc(100vh - 100px)
-	min-height: 650px
 	.owl-item
-		// height: calc(100vh - 100px)
-		// min-height: 650px
+		height: calc(100vh - 100px)
+		min-height: 700px
 		&.active
 			.h-heroes__title
 				animation-delay: 0.1s
@@ -37,9 +35,8 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		min-height: calc(100vh - 100px)
-		// height: calc(100vh - 100px)
-		// min-height: 650px
+		max-height: 100%!important
+		height: 100%
 		background-position: center center
 		background-size: cover
 		&:before

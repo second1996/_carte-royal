@@ -79,6 +79,14 @@
 			&-map
 				.btn
 					padding: 14px
+	.catering-page
+		.about-us
+			&__text
+				margin-right: 15px
+				p
+					// font-size: 15px
+			&__photo
+				margin-top: 85px
 
 
 // ≥768px
@@ -160,14 +168,53 @@
 				padding-right: 10px
 			&-photo
 				display: none
-			&-title,
+			&-title
+				padding-left: 0
+				padding-right: 0
+				.d-flex
+					flex-wrap: wrap
+				.location
+					order: 0
+					width: 65%
+				.info
+					order: 2
+					width: 100%
+					margin-top: 15px
+				.phone
+					order: 1
+					width: auto
 			&-map
-				padding: 0
+				// padding: 0
 	.family-page
 		.family
 			&__descr
 				p
 					margin-bottom: 20px
+	.catering-page
+		.f-heroes
+			&__info
+				.contacts
+					.location
+						order: 0
+						margin-bottom: 20px
+					.hours
+						order: 2
+					.phone
+						order: 1
+					&__item
+						justify-content: center
+						margin: 0
+		.skills
+			&__list
+				li
+					margin-top: 30px
+					padding-right: 20px
+					&:nth-child(-n+4)
+						margin-top: 30px
+					&:nth-child(-n+2)
+						margin-top: 0
+
+
 
 // ≥576px
 +media-breakpoint-down(sm)
@@ -226,6 +273,18 @@
 						left: 20px
 					.owl-next
 						right: 20px
+	.catering-page
+		.f-heroes
+			&__info
+				.contacts
+					.location
+						flex-basis: 100%
+						margin-bottom: 0
+					.hours,
+					.phone
+						margin-top: 20px
+					&__item
+						justify-content: flex-start
 
 
 // ≥0px
@@ -246,6 +305,9 @@
 			flex-basis: 90px
 		&__btn
 			display: none
+	.form
+		&-group
+			margin-bottom: 15px
 	.p-heroes
 		&__wrap
 			height: 200px
@@ -294,9 +356,16 @@
 			&__descr
 				p
 					font-size: 14px
+	.catering-page
+		.skills
+			&__list
+				li
+					padding-top: 30px
+					padding-left: 0
+					padding-right: 20px
 
 
-@media (max-width: 1140px)
+@media (min-width: 992px) and (max-width: 1140px)
 	.contacts-page
 		.contacts__table
 			&-title
@@ -313,7 +382,11 @@
 				.phone
 					order: 1
 					width: auto
-
+	.catering-page
+		.f-heroes
+			&__info
+				.contacts__item
+					margin: 0 15px
 
 
 // @media only screen and (max-width: 525px)
