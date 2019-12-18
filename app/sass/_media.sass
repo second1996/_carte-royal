@@ -191,19 +191,17 @@
 				p
 					margin-bottom: 20px
 	.catering-page
-		.f-heroes
-			&__info
-				.contacts
-					.location
-						order: 0
-						margin-bottom: 20px
-					.hours
-						order: 2
-					.phone
-						order: 1
-					&__item
-						justify-content: center
-						margin: 0
+		.contacts
+			.location
+				order: 0
+				margin-bottom: 20px
+			.hours
+				order: 2
+			.phone
+				order: 1
+			&__item
+				justify-content: center
+				margin: 0
 		.skills
 			&__list
 				li
@@ -213,7 +211,22 @@
 						margin-top: 30px
 					&:nth-child(-n+2)
 						margin-top: 0
-
+		.format
+			&__item
+			[class*="col-"]:nth-child(-n+6)
+				.format__item
+					margin-top: 45px
+			[class*="col-"]:nth-child(-n+4)
+				.format__item
+					margin-top: 0
+		.services
+			&__list
+				li
+					margin-top: 30px
+					&:nth-child(-n+4)
+						margin-top: 30px
+					&:nth-child(-n+2)
+						margin-top: 0
 
 
 // ≥576px
@@ -274,18 +287,34 @@
 					.owl-next
 						right: 20px
 	.catering-page
-		.f-heroes
-			&__info
-				.contacts
-					.location
-						flex-basis: 100%
-						margin-bottom: 0
-					.hours,
-					.phone
-						margin-top: 20px
-					&__item
-						justify-content: flex-start
-
+		.contacts
+			.location
+				flex-basis: 100%
+				margin-bottom: 0
+			.hours,
+			.phone
+				margin-top: 20px
+			&__item
+				justify-content: flex-start
+		.format
+			&__item
+			[class*="col-"]:nth-child(-n+4)
+				.format__item
+					margin-top: 45px
+			[class*="col-"]:nth-child(-n+3)
+				.format__item
+					margin-top: 0
+		.events
+			&__carousel
+				.owl-nav
+					.owl-prev,
+					.owl-next
+						top: -86px
+					.owl-prev
+						right: 0
+						margin-top: -50px
+					.owl-next
+						// top: 0
 
 // ≥0px
 +media-breakpoint-down(xs)
@@ -311,6 +340,9 @@
 	.p-heroes
 		&__wrap
 			height: 200px
+	.f-heroes
+		&__header
+			margin-top: -50px
 	.about-us-page
 		.h-advantages
 			[class*="col-"]:nth-last-child(-n+2)
@@ -363,6 +395,25 @@
 					padding-top: 30px
 					padding-left: 0
 					padding-right: 20px
+		.format
+			&__item
+			[class*="col-"]:nth-child(-n+4)
+				.format__item
+					margin-top: 45px
+			[class*="col-"]:nth-child(-n+2)
+				.format__item
+					margin-top: 0
+		.services
+			&__list
+				li
+					margin-top: 20px
+					&:nth-child(-n+4)
+						margin-top: 20px
+					&:nth-child(1)
+						margin-top: 0
+		.events
+			&__slide
+				padding: 30px
 
 
 @media (min-width: 992px) and (max-width: 1140px)
@@ -383,10 +434,9 @@
 					order: 1
 					width: auto
 	.catering-page
-		.f-heroes
-			&__info
-				.contacts__item
-					margin: 0 15px
+		.contacts
+			&__item
+				margin: 0 15px
 
 
 // @media only screen and (max-width: 525px)

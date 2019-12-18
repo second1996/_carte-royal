@@ -119,13 +119,13 @@
 			height: 20px
 			background: $text url('../img/icons/check-input.svg') no-repeat center/12px
 	&-range
+		padding-right: 1px
 		.irs--round .irs-line
 			border-radius: 0
 		.irs--round .irs-bar
 			border-radius: 0
 			background: $text
 		.irs--round .irs-min, .irs--round .irs-max
-			// display: none
 			border-radius: 0
 		.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single
 			background: $text
@@ -133,11 +133,10 @@
 				border-top-color: $text
 		.irs--round .irs-handle
 			border-color: $text
-		.irs-hidden-input
-			// visibility: hidden
 
 // Page Heroes customize
 .p-heroes
+	background: $text
 	&__wrap
 		position: relative
 		z-index: 0
@@ -178,8 +177,8 @@
 		flex-direction: column
 		align-items: center
 		justify-content: center
-		height: calc(100vh - 152px)
-		min-height: 700px
+		height: calc(100vh - 250px)
+		min-height: 450px
 		background-position: center center
 		background-repeat: no-repeat
 		background-size: cover
@@ -193,7 +192,7 @@
 			z-index: -1
 			background: rgba($text, 0.65)
 	&__header
-		margin-top: -100px
+		// margin-top: -100px
 	&__title
 		margin-bottom: 15px
 		color: $white
@@ -229,34 +228,3 @@
 						color: $white
 						font-weight: 700
 						text-transform: uppercase
-		.contacts
-			padding: 25px 0
-			background: #323232
-			&__item
-				display: flex
-				margin: 0 35px
-			&__icon
-				display: flex
-				align-items: center
-				justify-content: center
-				width: 46px
-				min-width: 46px
-				height: 46px
-				background: $white
-				.icon
-					fill: $text
-			&__meta
-				display: flex
-				flex-direction: column
-				margin-left: 20px
-				&-title
-					color: $white
-				&-descr
-					color: #fff
-					font-weight: 300
-				&-phone a,
-				&-email a
-					color: $white
-					font-weight: 300
-					&:hover
-						color: $accent

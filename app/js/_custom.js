@@ -99,7 +99,7 @@ $(document).ready(function(){
 			0: {
 				items: 1
 			},
-			768: {
+			992: {
 				items: 2
 			}
 		},
@@ -124,10 +124,6 @@ $(document).ready(function(){
 				bl_top = $(target).offset().top - 75;
 		$('body, html').animate({scrollTop: bl_top}, 1000);
 		return false;
-	});
-	
-	$(".form-range-slider").ionRangeSlider({
-		skin: "round"
 	});
 
 });
