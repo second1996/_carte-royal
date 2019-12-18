@@ -1,0 +1,33 @@
+@import vars
+
+.restaurant-page
+	.contacts
+		padding: 25px 0
+		background: #323232
+		&__item
+			display: flex
+		&__icon
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 46px
+			min-width: 46px
+			height: 46px
+			background: $white
+			.icon
+				fill: $text
+		&__meta
+			display: flex
+			flex-direction: column
+			margin-left: 20px
+			&-title
+				color: $white
+			&-descr
+				color: #fff
+				font-weight: 300
+			&-phone a,
+			&-email a
+				color: $white
+				font-weight: 300
+				&:hover
+					color: $accent

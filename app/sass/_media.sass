@@ -83,10 +83,14 @@
 		.about-us
 			&__text
 				margin-right: 15px
-				p
-					// font-size: 15px
 			&__photo
 				margin-top: 85px
+	.restaurant-page
+		.contacts
+			padding: 15px 0
+			&__item
+				margin: 10px 0
+
 
 
 // ≥768px
@@ -343,6 +347,10 @@
 	.f-heroes
 		&__header
 			margin-top: -50px
+		&__nav
+			.navigation
+				&__list li a
+					font-size: 15px
 	.about-us-page
 		.h-advantages
 			[class*="col-"]:nth-last-child(-n+2)
@@ -389,6 +397,9 @@
 				p
 					font-size: 14px
 	.catering-page
+		.about-us
+			.section-title
+				text-align: center
 		.skills
 			&__list
 				li
@@ -414,6 +425,18 @@
 		.events
 			&__slide
 				padding: 30px
+	.restaurant-page
+		.contacts
+			&__item
+				flex-direction: column
+			&__icon
+				width: 36px
+				min-width: 36px
+				height: 36px
+			&__meta
+				margin-top: 10px
+				margin-left: 0
+
 
 
 @media (min-width: 992px) and (max-width: 1140px)
@@ -438,6 +461,24 @@
 			&__item
 				margin: 0 15px
 
+@media only screen and (max-width: 360px)
+	.restaurant-page
+		.contacts
+			.location,
+			.hours,
+			.phone,
+			.receipt
+				flex: 0 0 100%
+				max-width: 100%
+			&__item
+				flex-direction: row
+			&__icon
+				width: 46px
+				min-width: 46px
+				height: 46px
+			&__meta
+				margin-top: 0
+				margin-left: 10px
 
 // @media only screen and (max-width: 525px)
 
