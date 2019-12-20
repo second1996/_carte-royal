@@ -31,3 +31,134 @@
 				font-weight: 300
 				&:hover
 					color: $accent
+	.about-us
+		&__title
+			margin-bottom: 30px
+			text-align: left
+		&__text
+			margin-right: 45px
+		&__signature
+			max-width: 130px
+		&__photo
+			&-list
+				display: flex
+				flex-wrap: wrap
+				li
+					position: relative
+					flex-basis: 95px
+					margin-right: 20px
+					width: 100%
+					border: 3px solid $border
+					&:first-child
+						flex-basis: 100%
+						max-width: 555px
+						height: 290px
+						margin-bottom: 15px
+						margin-right: 0
+						img
+							position: absolute
+							top: 50%
+							left: 50%
+							display: block
+							width: 100%
+							height: 100%
+							transform: translate(-50%, -50%)
+							object-fit: cover
+					&:last-child
+						margin-right: 0
+		&__advantages
+			&-list
+				display: flex
+				flex-wrap: wrap
+			&-item
+				display: flex
+				align-items: center
+				flex-basis: 33%
+				margin-top: 15px
+			&-icon
+				width: 18px
+				height: 18px
+				.icon
+					font-size: 16px
+			&-title
+				margin-top: 3px
+				margin-left: 8px
+				font-size: 14px
+				text-transform: uppercase
+	.menu
+		position: relative
+		z-index: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: -1
+			display: block
+			width: 100%
+			height: 100%
+			background: url('../img/@2x/bg-pattern.png') no-repeat top/cover
+			opacity: 0.05
+		&__item
+			display: flex
+			align-items: center
+			justify-content: space-between
+			height: 95px
+			border: 1px solid $border
+			background: $white
+		&__left
+			display: flex
+			flex: 1 1 auto
+			align-items: center
+			padding: 0 25px
+		&__icon
+			width: 45px
+			height: 45px
+			margin-right: 20px
+			.icon
+				font-size: 45px
+		&__title
+			margin-bottom: 0
+			font-weight: 400
+			> u
+				font-weight: 700
+		&__right
+			height: 100%
+			border-left: 1px solid $border
+			background: $trsp
+			transition: background-color .3s
+			&:hover
+				background: $text
+				.menu__link-title
+					color: $white
+		&__link
+			display: flex
+			align-items: center
+			height: 100%
+			padding: 0 30px
+			&-title
+				color: $title
+				text-transform: uppercase
+				transition: color .3s
+				.icon
+					display: inline-block
+					vertical-align: middle
+					margin-top: -3px
+					margin-left: 8px
+					font-size: 20px
+	.gallery
+		.fotorama
+			&__wrap
+				width: 100%!important
+				margin: 0 auto
+			&__stage__frame
+				border: 3px solid $border
+			&__thumb
+				border: 2px solid $border
+				&-border
+					padding: 2px
+					border-color: $accent
+			&__nav__frame--thumb.fotorama__active
+				.fotorama__thumb
+					// border-color: $accent
