@@ -121,8 +121,15 @@ $(document).ready(function(){
 	// Anchors Links
 	$('a[data-link^="anchor"]').bind('click.smoothscroll', function(){
 		var target = $(this).attr('href'),
-				bl_top = $(target).offset().top - 75;
-		$('body, html').animate({scrollTop: bl_top}, 1000);
+				bl_top = $(target).offset().top - 75,
+				bl_top_class = $(target).hasClass('section-gray'),
+				bl_top_padding = $(target).offset().top;
+
+		if( bl_top_class == false ) {
+			$('body, html').animate({scrollTop: bl_top}, 1000);
+		} else {
+			$('body, html').animate({scrollTop: bl_top_padding}, 1000);
+		}
 		return false;
 	});
 

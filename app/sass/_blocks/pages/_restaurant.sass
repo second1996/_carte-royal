@@ -3,7 +3,7 @@
 .restaurant-page
 	.contacts
 		padding: 25px 0
-		background: #323232
+		background: $text
 		&__item
 			display: flex
 		&__icon
@@ -23,7 +23,7 @@
 			&-title
 				color: $white
 			&-descr
-				color: #fff
+				color: $white
 				font-weight: 300
 			&-phone a,
 			&-email a
@@ -45,8 +45,8 @@
 				flex-wrap: wrap
 				li
 					position: relative
-					flex-basis: 95px
-					margin-right: 20px
+					flex-basis: 99px
+					margin-right: 15px
 					width: 100%
 					border: 3px solid $border
 					&:first-child
@@ -149,16 +149,73 @@
 					font-size: 20px
 	.gallery
 		.fotorama
-			&__wrap
-				width: 100%!important
-				margin: 0 auto
 			&__stage__frame
 				border: 3px solid $border
 			&__thumb
-				border: 2px solid $border
+				border: 3px solid $border
 				&-border
 					padding: 2px
 					border-color: $accent
-			&__nav__frame--thumb.fotorama__active
-				.fotorama__thumb
-					// border-color: $accent
+					border-width: 3px
+	.order
+		position: relative
+		z-index: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: -1
+			display: block
+			width: 100%
+			height: 100%
+			background: url('../img/@2x/bg-pattern.png') no-repeat top/cover
+			opacity: 0.05
+		&__form
+			max-width: 1200px
+			margin: 0 auto
+			padding-bottom: 45px
+			border-bottom: 1px solid $border
+		&__contacts
+			max-width: 1200px
+			margin: 0 auto
+			padding-top: 45px
+			&-item
+				display: flex
+				flex-direction: column
+				align-items: center
+			&-icon
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 46px
+				min-width: 46px
+				height: 46px
+				margin-bottom: 15px
+				background: $text
+				.icon
+					fill: $white
+			&-title
+				margin-bottom: 10px
+				color: $title
+				font-size: 22px
+				font-weight: 700
+				text-transform: uppercase
+			&-descr
+				color: $text
+				font-weight: 300
+			&-phone
+				display: block
+				color: $text
+				font-weight: 300
+				&:hover
+					color: $accent
+		&__map
+			position: relative
+			z-index: 0
+			margin-top: 45px
+			iframe
+				display: block
+				width: 100%
+				height: 550px

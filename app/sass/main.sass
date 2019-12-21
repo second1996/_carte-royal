@@ -43,16 +43,22 @@ body
 	height: auto
 
 // Lazyload
+// .lazy:not(img)
+// 	filter: opacity(0)
+// .lazy:not(img)[data-was-processed="true"]
+// 	filter: opacity(1)
+// 	transition: filter 1s
 img.lazy
-	filter: opacity(0)
+	opacity: 0
 img.lazy:not(.initial)
-	transition: filter 1s
+	transition: opacity 1s
 img.initial,
 img.loaded,
 img.error
-	filter: opacity(1)
+	opacity: 1
 img.lazy:not([src]):not([srcset])
 	visibility: hidden
+
 @-moz-document url-prefix()
 	img:-moz-loading
 		visibility: hidden
@@ -62,7 +68,7 @@ img.lazy:not([src]):not([srcset])
 	position: absolute
 	top: 50%
 	left: 50%
-	z-index: 0
+	z-index: -1
 	display: inline-block
 	height: 32px
 	width: 32px
@@ -78,7 +84,6 @@ img.lazy:not([src]):not([srcset])
 		transform: rotate(0)
 	100%
 		transform: rotate(360deg)
-
 
 .icon
 	display: inline-block
@@ -111,7 +116,7 @@ img.lazy:not([src]):not([srcset])
 	text-transform: uppercase
 	white-space: nowrap
 	outline: 0
-	transition: background-color .3s, border-color .3s
+	transition: background-color .3s, border-color .3s, color .3s
 	&:hover
 		background-color: $text
 		color: $white
@@ -206,6 +211,11 @@ ul
 	margin: 0
 	padding: 0
 	list-style: none
+hr
+	margin: 45px 0
+	border: 0
+	height: 1px
+	background-color: $border
 
 
 // Owl Arrows
