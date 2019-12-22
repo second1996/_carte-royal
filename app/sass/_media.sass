@@ -121,6 +121,28 @@
 		font-size: 38px
 	.pt-150
 		padding-top: 100px
+	.pt-100
+		padding-top: 75px
+	.pt-50
+		padding-top: 25px
+	.pb-150
+		padding-bottom: 100px
+	.pb-100
+		padding-bottom: 75px
+	.pb-50
+		padding-bottom: 25px
+	.mt-150
+		margin-top: 100px
+	.mt-100
+		margin-top: 75px
+	.mt-50
+		margin-top: 25px
+	.mb-150
+		margin-bottom: 100px
+	.mb-100
+		margin-bottom: 75px
+	.mb-50
+		margin-bottom: 25px
 	.section
 		margin-top: 100px
 		margin-bottom: 100px
@@ -148,6 +170,10 @@
 					margin-bottom: 15px
 					&:last-child
 						margin-bottom: 0
+	.nav
+		&-link
+			padding: 10px 15px
+			font-size: 14px
 	.h-heroes
 		&__wrap
 			max-width: 500px
@@ -273,6 +299,18 @@
 			&__contacts
 				.location
 					margin-top: 30px
+	.menu-page
+		.menu
+			&__title
+				font-size: 30px
+			[class*="col"]:nth-child(-n+3)
+				.menu__item
+					margin-top: 30px
+			[class*="col"]:nth-child(-n+2)
+				.menu__item
+					margin-top: 0
+			&__name
+				font-size: 16px
 
 
 
@@ -382,6 +420,30 @@
 		.gallery
 			.fotorama__stage
 				height: 360px!important
+	.menu-page
+		.menu
+			&__wrap
+				margin-top: 45px
+			&__title
+				margin-bottom: 30px
+				font-size: 26px
+			[class*="col"]:nth-child(-n+3)
+				.menu__item
+					margin-top: 15px
+			[class*="col"]:nth-child(-n+1)
+				.menu__item
+					margin-top: 0
+			&__item
+				margin-top: 15px
+			&__label
+				padding-bottom: 2px
+				font-size: 10px
+			&__label-icon
+				&--hot,
+				&--vegan
+					top: 5px
+			&__price
+				padding-left: 2px
 
 // ≥0px
 +media-breakpoint-down(xs)

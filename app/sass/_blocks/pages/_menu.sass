@@ -1,0 +1,96 @@
+.menu-page
+	position: relative
+	z-index: 0
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: -1
+		display: block
+		width: 100%
+		height: 100%
+		background: url('../img/@2x/bg-pattern.png') no-repeat top/100%
+		opacity: 0.05
+	.menu
+		&__wrap
+			margin-top: 75px
+		&__inner
+			margin-left: -20px
+			margin-right: -20px
+		&__title
+			margin-bottom: 40px
+			text-align: center
+		[class*="col"]
+			padding: 0 20px
+			&:nth-child(-n+3)
+				.menu__item
+					margin-top: 0
+		&__item
+			position: relative
+			margin-top: 30px
+			margin-bottom: 0
+			padding-right: 100px
+			color: $title
+			font-size: 18px
+			font-weight: 400
+			text-transform: uppercase
+			&:after
+				content: '/'
+				opacity: 0
+		&__name
+			position: relative
+			z-index: 1
+			padding-right: 1px
+			background: $white
+		&__labels
+			display: inline-block
+			transform: translateY(-2px)
+			user-select: none
+			white-space: nowrap
+		&__label
+			margin-right: 2px
+			padding: 2px 4px 1px
+			border-radius: 2px
+			font-size: 12px
+			line-height: 1
+			text-transform: uppercase
+			&--new
+				background: $text
+				color: $white
+		&__label-icon
+			display: inline-block
+			position: relative
+			width: 100%
+			height: 100%
+			&--hot
+				top: 3px
+				width: 16px
+				height: 16px
+				background: url('../img/icons/chili.svg') no-repeat center/cover
+			&--vegan
+				top: 3px
+				width: 16px
+				height: 16px
+				background: url('../img/icons/vegetarian.svg') no-repeat center/cover
+		&__dots
+			position: absolute
+			top: 12px
+			left: 80px
+			right: 0
+			display: block
+			height: 4px
+			margin: 0
+			border: 0
+			background: radial-gradient(rgba($title, .25) 40%,$trsp 10%)
+			background-position: 0 0
+			background-size: 4px 4px
+			background-repeat: repeat-x
+		&__price
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 1
+			background: $white
+			white-space: nowrap

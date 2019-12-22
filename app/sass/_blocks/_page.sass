@@ -3,13 +3,17 @@
 // Breadcrumbs customize
 .breadcrumbs
 	padding: 15px 0
+	border-bottom: 1px solid $border
+	background: $white
 	&__list
 		display: flex
 		flex-wrap: wrap
 		align-items: center
 		li
+			margin: 5px 0
 			color: #c9c9c9
 			font-size: 14px
+			line-height: 1
 			text-transform: uppercase
 			&:after
 				content: '/'
@@ -233,3 +237,41 @@
 						color: $white
 						font-weight: 700
 						text-transform: uppercase
+
+// Menu page Heroes customize
+.m-heroes
+	&__title
+		margin-bottom: 0
+		> span
+			display: block
+			margin-top: 10px
+			color: #727272
+			font-size: 18px
+			font-weight: 400
+			line-height: 1.25em
+
+// Tabs customize
+.nav
+	&.nav-tabs
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+	&-item
+		margin: 7.5px
+	&-link
+		padding: 15px 30px
+		display: block
+		border: 1px solid $text
+		background: $white
+		color: $text
+		font-size: 16px
+		line-height: 1
+		text-transform: uppercase
+		&.active
+			background: $text
+			color: $white
+.tab-content
+	> .tab-pane
+		display: none
+	> .active
+		display: block
