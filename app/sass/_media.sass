@@ -90,7 +90,27 @@
 			padding: 15px 0
 			&__item
 				margin: 10px 0
-
+		.about-us
+			&__photo
+				width: 450px
+				&-list
+					li
+						flex-basis: 82px
+						margin-right: 10px
+						&:first-child
+							margin-bottom: 10px
+		.menu
+			&__title
+				font-size: 22px
+			&__link
+				&-title
+					font-size: 14px
+					.icon
+						font-size: 14px
+						margin-top: -2px
+		.gallery
+			.fotorama__stage
+				height: 500px!important
 
 
 // ≥768px
@@ -231,6 +251,29 @@
 						margin-top: 30px
 					&:nth-child(-n+2)
 						margin-top: 0
+	.restaurant-page
+		.about-us
+			&__title
+				text-align: center
+			&__text
+				margin-right: 0
+		.menu
+			&__item
+				min-height: 80px
+				margin-top: 20px
+			[class*="col-"]:first-child
+				.menu__item
+					margin-top: 0
+			&__link
+				min-height: 80px
+		.gallery
+			.fotorama__stage
+				height: 400px!important
+		.order
+			&__contacts
+				.location
+					margin-top: 30px
+
 
 
 // ≥576px
@@ -317,8 +360,28 @@
 					.owl-prev
 						right: 0
 						margin-top: -50px
-					.owl-next
-						// top: 0
+	.restaurant-page
+		.menu
+			&__item
+				min-height: 70px
+			&__icon
+				width: 32px
+				height: 32px
+				.icon
+					font-size: 32px
+			&__title
+				font-size: 20px
+			&__link
+				min-height: 70px
+				padding: 0 20px
+				&-title
+					font-size: 13px
+					.icon
+						margin-top: -3px
+						font-size: 13px
+		.gallery
+			.fotorama__stage
+				height: 360px!important
 
 // ≥0px
 +media-breakpoint-down(xs)
@@ -436,6 +499,26 @@
 			&__meta
 				margin-top: 10px
 				margin-left: 0
+		.menu
+			&__item
+				min-height: 60px
+			&__title
+				font-size: 18px
+			&__link
+				min-height: 60px
+				.icon
+					margin-left: 4px
+		.gallery
+			.fotorama__stage
+				height: 320px!important
+		.order
+			&:before
+				background-size: cover
+				background-position: top left
+			&__contacts
+				&-title
+					font-size: 18px
+
 
 
 
@@ -460,6 +543,51 @@
 		.contacts
 			&__item
 				margin: 0 15px
+	.restaurant-page
+		.about-us
+			&__photo
+				width: 400px
+				&-list
+					li
+						flex-basis: 72px
+
+@media only screen and (max-width: 420px)
+	.restaurant-page
+		.about-us
+			&__advantages
+				&-item
+					flex-basis: 50%
+		.menu
+			&__item
+				flex-direction: column
+			&__left
+				flex-direction: column
+				width: 100%
+				padding-top: 15px
+				padding-bottom: 15px
+				border-bottom: 1px solid $border
+			&__icon
+				margin-right: 0
+				margin-bottom: 15px
+			&__right
+				width: 100%
+				border-left: 0
+				text-align: center
+			&__link
+				display: block
+				min-height: 100%
+				padding-top: 10px
+				padding-bottom: 10px
+		.order
+			&__contacts
+				&-icon
+					width: 36px
+					min-width: 36px
+					height: 36px
+					.icon
+						font-size: 14px
+
+
 
 @media only screen and (max-width: 360px)
 	.restaurant-page
