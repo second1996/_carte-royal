@@ -1,0 +1,43 @@
+@import vars
+
+.s-footer
+	background-color: $text
+	&__wrap
+		padding: 75px 0
+	&__logo
+		.icon
+			font-size: 90px
+			fill: $white
+	&__nav
+		&-list
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			li
+				margin: 5px 10px
+				a
+					color: $white
+					font-size: 15px
+					text-transform: uppercase
+					&:hover
+						color: $accent
+	&__social
+		display: flex
+		justify-content: flex-end
+		&-link
+			margin-right: 15px
+			color: $white
+			font-size: 16px
+			&:last-child
+				margin-right: 0
+			&:hover
+				color: $accent
+	&__made-by
+		padding: 15px 0
+		background-color: #2b2b2b
+		text-align: center
+		a
+			color: $white
+			font-weight: 300
+			&:hover
+				color: $accent
