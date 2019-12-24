@@ -29,13 +29,12 @@
 					width: 30px
 					height: 2px
 					background: $text
-			&-title
-				margin-top: 2px
-				margin-left: 10px
-				text-transform: uppercase
-				color: $title
-				font-size: 14px
-				line-height: 1
+					transition: width .3s
+			&.toggled
+				.s-header__humb-icon
+					span
+						&:nth-child(3)
+							width: 26px
 		&__left
 			display: flex
 			align-items: center
@@ -108,9 +107,6 @@
 					.icon
 						font-size: 14px
 						margin-top: -2px
-		.gallery
-			.fotorama__stage
-				// height: 500px!important
 
 
 // ≥768px
@@ -292,9 +288,6 @@
 					margin-top: 0
 			&__link
 				min-height: 80px
-		.gallery
-			.fotorama__stage
-				// height: 400px!important
 		.order
 			&__contacts
 				.location
@@ -338,6 +331,16 @@
 			padding-bottom: 75px
 		&-title
 			font-size: 32px
+	.fotorama
+		.fotorama__arr
+			width: 36px
+			height: 36px
+			margin-top: -18px
+			background-size: 16px
+			&--prev
+				left: 30px
+			&--next
+				right: 30px
 	.h-heroes
 		.owl-carousel_nav
 			display: none
@@ -425,9 +428,6 @@
 					.icon
 						margin-top: -3px
 						font-size: 13px
-		.gallery
-			.fotorama__stage
-				// height: 360px!important
 	.menu-page
 		.menu
 			&__wrap
@@ -578,9 +578,6 @@
 				min-height: 60px
 				.icon
 					margin-left: 4px
-		.gallery
-			.fotorama__stage
-				// height: 320px!important
 		.order
 			&:before
 				background-size: cover
@@ -648,6 +645,11 @@
 				min-height: 100%
 				padding-top: 10px
 				padding-bottom: 10px
+		.gallery
+			.fotorama__nav--thumbs .fotorama__nav__frame
+				height: 42px
+			.fotorama__thumb-border
+				height: 38px
 		.order
 			&__contacts
 				&-icon

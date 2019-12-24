@@ -15,9 +15,9 @@ $(document).ready(function(){
 		touchDrag: false,
 		nav: true,
 		loop: true,
-		// autoplay: true,
-		// autoplayTimeout: 5000,
-		// autoplayHoverPause: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
 		navContainer: '.h-heroes__carousel-nav',
 		navText: [
 			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
@@ -110,6 +110,7 @@ $(document).ready(function(){
 			mNav			= $('.m-nav');
 
 	mNavHumb.on('click', function() {
+		$(this).toggleClass('toggled')
 		mNav.toggleClass('is-active');
 	});
 
