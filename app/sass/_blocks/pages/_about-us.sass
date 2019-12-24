@@ -1,17 +1,32 @@
 @import vars
 
 .about-us-page
-	.h-about-us
+	.about-us
+		&__title
+			margin-bottom: 30px
+			text-align: left
+		&__text
+			margin-right: 45px
+		&__signature
+			max-width: 130px
 		&__img
 			position: relative
 			display: flex
 			justify-content: center
 			margin-top: -45px
-	.h-advantages
+	.advantages
 		[class*="col-"]:nth-last-child(-n+4)
 			margin-bottom: 0
 		&__item
 			margin-bottom: 45px
+			padding: 0 30px
+			text-align: center
+		&__icon
+			margin-bottom: 15px
+			.icon
+				font-size: 50px
+		&__descr
+			margin-bottom: 0
 	.reviews
 		.owl-carousel_nav
 			top: 55%
