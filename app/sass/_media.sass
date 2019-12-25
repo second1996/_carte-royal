@@ -50,9 +50,16 @@
 		&__item
 			height: 360px
 		&__photo
-			height: 210px
+			height: 215px
 		&__meta
-			padding: 30px
+			padding: 25px 30px
+			transform: translate3d(0,70px,0)
+		&__logo
+			height: 210px
+			img
+				max-width: 140px
+				max-height: 125px
+				margin-top: 0
 		&__title
 			font-size: 20px
 	.h-delivery
@@ -182,9 +189,12 @@
 		&__item
 			height: 400px
 		&__photo
-			height: 180px
+			height: 186px
 		&__meta
 			transform: none
+		&__logo
+			img
+				margin-top: 30px
 	.about-us-page
 		.about-us
 			&__img
@@ -349,15 +359,6 @@
 	.h-heroes
 		.owl-carousel_nav
 			display: none
-	.h-restaurants
-		&__contacts
-			&-phone
-				a
-					display: block
-					margin-top: 5px
-					margin-right: 0
-					&:first-child
-						margin-top: 0
 	.catering
 		padding: 75px 0
 	.about-us-page
@@ -623,6 +624,16 @@
 						flex-basis: 72px
 
 @media only screen and (max-width: 420px)
+	.h-restaurants
+		&__contacts
+			&-phone
+				span
+					margin-top: 0
+					white-space: nowrap
+				a
+					display: block
+					margin-top: 3px
+					margin-right: 0
 	.restaurant-page
 		.about-us
 			&__advantages
@@ -668,6 +679,9 @@
 
 
 @media only screen and (max-width: 360px)
+	.h-about-us
+		&__signature
+			max-width: 115px
 	.restaurant-page
 		.contacts
 			.location,
