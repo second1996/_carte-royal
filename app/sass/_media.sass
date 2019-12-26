@@ -156,6 +156,9 @@
 			margin-top: 45px
 		&-title
 			font-size: 38px
+		&-descr
+			font-size: 15px
+			line-height: 1.4em
 	.s-header
 		&__wrap
 			height: 70px
@@ -181,6 +184,8 @@
 		&__wrap
 			max-width: 500px
 	.h-about-us
+		&__title
+			text-align: center
 		&__text
 			margin-right: 0
 		&__photo
@@ -197,6 +202,10 @@
 				margin-top: 30px
 	.about-us-page
 		.about-us
+			&__title
+				text-align: center
+			&__text
+				margin-right: 0
 			&__img
 				margin-top: 15px
 		.advantages
@@ -247,6 +256,11 @@
 				p
 					margin-bottom: 20px
 	.catering-page
+		.about-us
+			&__title
+				text-align: center
+			&__text
+				margin-right: 0
 		.contacts
 			.location
 				order: 0
@@ -259,14 +273,12 @@
 				justify-content: center
 				margin: 0
 		.skills
-			&__list
-				li
+			&__item
+				margin-top: 30px
+				&:nth-child(-n+4)
 					margin-top: 30px
-					padding-right: 20px
-					&:nth-child(-n+4)
-						margin-top: 30px
-					&:nth-child(-n+2)
-						margin-top: 0
+				&:nth-child(-n+2)
+					margin-top: 0
 		.format
 			&__item
 			[class*="col-"]:nth-child(-n+6)
@@ -276,13 +288,12 @@
 				.format__item
 					margin-top: 0
 		.services
-			&__list
-				li
+			&__item
+				margin-top: 30px
+				&:nth-child(-n+4)
 					margin-top: 30px
-					&:nth-child(-n+4)
-						margin-top: 30px
-					&:nth-child(-n+2)
-						margin-top: 0
+				&:nth-child(-n+2)
+					margin-top: 0
 	.about-us-page
 		.about-us
 			&__img img
@@ -319,6 +330,11 @@
 					margin-top: 0
 			&__name
 				font-size: 16px
+	.contacts-page
+		.contacts
+			&__table
+				&-item
+					padding-top: 0
 	.s-footer
 		&__logo
 			display: flex
@@ -361,6 +377,11 @@
 			display: none
 	.catering
 		padding: 75px 0
+		&__logo
+			img
+				max-width: 130px
+		&__descr
+			font-size: 15px
 	.about-us-page
 		.about-us
 			&__img img
@@ -463,10 +484,10 @@
 	h1
 		font-size: 36px
 	h2
-		font-size: 26px
+		font-size: 24px
 	.section
 		&-title
-			font-size: 26px
+			font-size: 24px
 	.s-header
 		&__left
 			justify-content: flex-end
@@ -489,6 +510,10 @@
 			.navigation
 				&__list li a
 					font-size: 15px
+	.catering
+		&__logo
+			img
+				max-width: 100px
 	.about-us-page
 		.advantages
 			[class*="col-"]:nth-last-child(-n+2)
@@ -535,15 +560,11 @@
 				p
 					font-size: 14px
 	.catering-page
-		.about-us
-			.section-title
-				text-align: center
 		.skills
-			&__list
-				li
-					padding-top: 30px
-					padding-left: 0
-					padding-right: 20px
+			&__item
+				padding-top: 30px
+			&__descr
+				padding-right: 0
 		.format
 			&__item
 			[class*="col-"]:nth-child(-n+4)
@@ -553,13 +574,12 @@
 				.format__item
 					margin-top: 0
 		.services
-			&__list
-				li
-					margin-top: 20px
-					&:nth-child(-n+4)
-						margin-top: 20px
-					&:nth-child(1)
-						margin-top: 0
+			&__item
+				margin-top: 30px
+				&:nth-child(-n+4)
+					margin-top: 30px
+				&:nth-child(1)
+					margin-top: 0
 		.events
 			&__slide
 				padding: 30px
@@ -590,7 +610,13 @@
 			&__contacts
 				&-title
 					font-size: 18px
-
+	.menu-page
+		.menu
+			&__inner
+				margin-left: -10px
+				margin-right: -10px
+			[class*="col"]
+				padding: 0 10px
 
 
 
@@ -624,6 +650,10 @@
 						flex-basis: 72px
 
 @media only screen and (max-width: 420px)
+	.breadcrumbs
+		padding: 10px 0
+		li
+			font-size: 12px
 	.h-restaurants
 		&__contacts
 			&-phone

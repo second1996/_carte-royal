@@ -2,13 +2,14 @@
 
 // Breadcrumbs customize
 .breadcrumbs
-	padding: 15px 0
+	padding: 14px 0
 	border-bottom: 1px solid $border
 	background: $white
 	&__list
 		display: flex
 		flex-wrap: wrap
 		align-items: center
+		justify-content: center
 		li
 			margin: 5px 0
 			color: #c9c9c9
@@ -284,3 +285,7 @@
 		display: none
 	> .active
 		display: block
+		// animation-delay: 0.05s
+		animation-duration: .5s
+		animation-fill-mode: both
+		animation-name: slideInUp
