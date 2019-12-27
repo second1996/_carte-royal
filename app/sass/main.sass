@@ -51,14 +51,13 @@ body
 img.lazy
 	opacity: 0
 img.lazy:not(.initial)
-	transition: opacity 1s
+	transition: opacity 1.25s cubic-bezier(0.165, 0.84, 0.44, 1)
 img.initial,
 img.loaded,
 img.error
 	opacity: 1
 img.lazy:not([src]):not([srcset])
 	visibility: hidden
-
 @-moz-document url-prefix()
 	img:-moz-loading
 		visibility: hidden
