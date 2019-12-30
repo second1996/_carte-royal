@@ -31,8 +31,8 @@ body
 		color: $title
 		text-decoration: none
 		transition: color .3s
-		&:hover
-			color: $text
+	&:hover
+		color: $text
 
 .container
 	padding: 0 15px
@@ -120,12 +120,16 @@ img.lazy:not([src]):not([srcset])
 		background-color: $text
 		color: $white
 		cursor: pointer
+	&:active
+		background: darken($text, 10%)
 	&-solid
 		background-color: $text
 		color: $white
 		&:hover
 			background-color: $trsp
 			color: $text
+		&:active
+			background: rgba($border, 0.5)
 	&-white
 		border-color: $white
 		color: $white
@@ -138,6 +142,8 @@ img.lazy:not([src]):not([srcset])
 		color: $title
 		&:hover
 			border-color: $text
+		&:active
+			background: darken($text, 10%)
 
 .section
 	position: relative
@@ -354,8 +360,6 @@ hr
 		background-size: 18px
 		border: 1px solid $white
 		transition: opacity .3s
-		&:hover
-			opacity: 0.5
 		&--prev
 			left: 50px
 			background-image: url('../img/icons/arrow-white.svg')
@@ -381,9 +385,9 @@ hr
 // Other pages
 @import "_blocks/pages/about-us"
 @import "_blocks/pages/contacts"
-@import "_blocks/pages/family"
 @import "_blocks/pages/catering"
-@import "_blocks/pages/restaurant"
+@import "_blocks/pages/family"
+@import "_blocks/pages/family-single"
 @import "_blocks/pages/menu"
 
 // Media queries
