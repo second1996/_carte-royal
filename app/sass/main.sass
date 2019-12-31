@@ -4,7 +4,7 @@
 
 ::placeholder
 	color: rgba($text, 0.75)
-	font-size: 15px
+	font-size: 14px
 
 ::selection
 	background-color: $border
@@ -15,9 +15,9 @@ input, textarea
 	border-radius: 0
 	outline: none
 	&:focus:required:invalid
-		border-color: red
+		border-color: $text
 	&:required:valid
-		border-color: green
+		border-color: $accent
 
 body
 	font-size: 16px
@@ -236,6 +236,7 @@ h1, h2, h3, h4, h5, h6
 	text-transform: uppercase
 p
 	margin-top: 15px
+	margin-bottom: 0
 	font-weight: 300
 	b
 		font-weight: 400
@@ -245,6 +246,21 @@ ul
 	margin: 0
 	padding: 0
 	list-style: none
+	li
+		font-weight: 300
+ul.ul-list
+	margin-top: 5px
+	li
+		position: relative
+		padding-left: 15px
+		&:before
+			content: ''
+			position: absolute
+			top: 10px
+			left: 0
+			width: 5px
+			height: 5px
+			background-color: #555
 hr
 	margin: 45px 0
 	border: 0

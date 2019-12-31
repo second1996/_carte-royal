@@ -262,6 +262,28 @@
 				p
 					margin-bottom: 20px
 					padding-right: 0
+	.family-single
+		.about-us
+			&__title
+				text-align: center
+			&__text
+				margin-right: 0
+		.menu
+			&__item
+				min-height: 80px
+				margin-top: 20px
+			[class*="col-"]:first-child
+				.menu__item
+					margin-top: 0
+			&__link
+				min-height: 80px
+		.order
+			&__contacts
+				.location
+					margin-top: 30px
+			&__map
+				iframe
+					height: 450px
 	.catering-page
 		.about-us
 			&__title
@@ -306,28 +328,6 @@
 			&__img img
 				max-width: 50%
 				max-height: 350px
-	.family-single
-		.about-us
-			&__title
-				text-align: center
-			&__text
-				margin-right: 0
-		.menu
-			&__item
-				min-height: 80px
-				margin-top: 20px
-			[class*="col-"]:first-child
-				.menu__item
-					margin-top: 0
-			&__link
-				min-height: 80px
-		.order
-			&__contacts
-				.location
-					margin-top: 30px
-			&__map
-				iframe
-					height: 450px
 	.menu-page
 		.menu
 			&__title
@@ -678,6 +678,15 @@
 			&__item
 				margin: 0 15px
 	.family-single
+		.contacts
+			.hours,
+			.location,
+			.phone,
+			.receipt
+				flex-basis: 50%
+			&__meta
+				&-descr
+					max-width: 100%
 		.about-us
 			&__photo
 				width: 400px
