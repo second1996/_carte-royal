@@ -93,9 +93,29 @@
 					vertical-align: top
 					width: 50%
 					.name
+						position: relative
+						display: inline-block
 						margin-bottom: 5px
 						font-size: 16px
+						&:after
+							content: ''
+							position: absolute
+							top: 50%
+							left: calc(100% - 16px)
+							display: inline-block
+							width: 16px
+							height: 10px
+							margin-top: -5px
+							background: url('../img/icons/right-arrow.svg') no-repeat center/cover
+							opacity: 0
+							transition: transform .3s, opacity .3s
+							pointer-events: none
+						&:hover
+							&:after
+								transform: translate3d(25px,0,0)
+								opacity: 1
 					.adress
+						display: block
 						font-size: 15px
 						font-weight: 300
 				.info

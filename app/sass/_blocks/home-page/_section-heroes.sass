@@ -11,8 +11,11 @@
 				animation-delay: 0.1s
 			.h-heroes__descr
 				animation-delay: 0.3s
+			.h-heroes__btn
+				animation-delay: 0.5s
 			.h-heroes__title,
-			.h-heroes__descr
+			.h-heroes__descr,
+			.h-heroes__btn
 				animation-duration: 0.85s
 				animation-fill-mode: both
 				animation-name: fadeInUp
@@ -51,13 +54,31 @@
 	&__wrap
 		max-width: 700px
 		margin: 0 auto
+		text-align: center
 	&__title
 		margin-bottom: 15px
 		color: $white
-		text-align: center
 		text-transform: uppercase
 	&__descr
 		margin-bottom: 30px
 		color: $white
 		font-weight: 300
-		text-align: center
+	&__video
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 1
+			background: rgba($text, .65)
+		video
+			width: 100%
+			height: calc(100vh - 100px)
+			min-height: 550px
+			object-fit: cover
