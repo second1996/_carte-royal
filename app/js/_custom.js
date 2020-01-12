@@ -63,7 +63,7 @@ $(document).ready(function(){
 		margin: 10,
 		lazyLoad: true,
 		mouseDrag: false,
-		// touchDrag: true,
+		touchDrag: true,
 		nav: true,
 		dots: false,
 		navText: [
@@ -83,10 +83,7 @@ $(document).ready(function(){
 		},
 	});
 	$(".events__carousel").owlCarousel({
-		// loop: true,
 		margin: 20,
-		// center: true,
-		// startPosition: 1,
 		mouseDrag: false,
 		touchDrag: true,
 		dots: false,

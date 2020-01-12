@@ -27,12 +27,61 @@ body
 	font-family: 'Roboto', sans-serif
 	overflow-x: hidden
 	color: $text
-	a
-		color: $title
-		text-decoration: none
-		transition: color .3s
+a
+	color: $title
+	text-decoration: none
+	transition: color .3s ease
 	&:hover
 		color: $text
+h1
+	font-size: 56px
+h2
+	font-size: 48px
+h3
+	font-size: 36px
+h4
+	font-size: 28px
+h5
+	font-size: 22px
+h6
+	font-size: 18px
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	margin-bottom: 15px
+	color: $title
+	line-height: 1.05em
+	text-transform: uppercase
+p
+	margin-top: 15px
+	margin-bottom: 0
+	font-weight: 300
+	b,
+	strong
+		font-weight: 400
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		font-weight: 300
+ul.ul-list
+	margin-top: 5px
+	li
+		position: relative
+		padding-left: 15px
+		&:before
+			content: ''
+			position: absolute
+			top: 10px
+			left: 0
+			width: 5px
+			height: 5px
+			background-color: #555
+hr
+	margin: 45px 0
+	border: 0
+	height: 1px
+	background-color: $border
 
 .container
 	padding: 0 15px
@@ -195,56 +244,6 @@ img.lazy:not([src]):not([srcset])
 .mb-0
 	margin-bottom: 0
 
-h1
-	font-size: 56px
-h2
-	font-size: 48px
-h3
-	font-size: 36px
-h4
-	font-size: 28px
-h5
-	font-size: 22px
-h6
-	font-size: 18px
-h1, h2, h3, h4, h5, h6
-	margin: 0
-	margin-bottom: 15px
-	color: $title
-	line-height: 1.05em
-	text-transform: uppercase
-p
-	margin-top: 15px
-	margin-bottom: 0
-	font-weight: 300
-	b
-		font-weight: 400
-	strong
-		font-weight: 700
-ul
-	margin: 0
-	padding: 0
-	list-style: none
-	li
-		font-weight: 300
-ul.ul-list
-	margin-top: 5px
-	li
-		position: relative
-		padding-left: 15px
-		&:before
-			content: ''
-			position: absolute
-			top: 10px
-			left: 0
-			width: 5px
-			height: 5px
-			background-color: #555
-hr
-	margin: 45px 0
-	border: 0
-	height: 1px
-	background-color: $border
 
 
 // Owl Arrows

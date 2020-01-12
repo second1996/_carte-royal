@@ -105,6 +105,9 @@
 						margin-right: 10px
 						&:first-child
 							margin-bottom: 10px
+		.gallery
+			&__content
+				min-height: 540px
 		.menu
 			&__title
 				font-size: 22px
@@ -268,6 +271,9 @@
 				text-align: center
 			&__text
 				margin-right: 0
+		.gallery
+			&__content
+				min-height: 400px
 		.menu
 			&__item
 				min-height: 80px
@@ -453,6 +459,9 @@
 					.owl-next
 						right: 20px
 	.family-single
+		.gallery
+			&__content
+				min-height: 380px
 		.menu
 			&__item
 				min-height: 70px
@@ -483,7 +492,6 @@
 			&__wrap
 				margin-top: 45px
 			&__title
-				margin-bottom: 30px
 				font-size: 26px
 			[class*="col"]:nth-child(-n+3)
 				.menu__item
@@ -563,6 +571,9 @@
 					justify-content: space-between
 				.location
 					width: 100%!important
+					.name
+						&:after
+							display: none
 				.info
 					order: 1!important
 					width: 100%!important
@@ -572,25 +583,6 @@
 					margin-top: 10px
 					a
 						margin-bottom: 6px
-	.family-page
-		.family
-			&__item
-				padding: 30px 0
-			&__contacts
-				&-list
-					li
-						line-height: 1.25
-						span
-							font-size: 14px
-				&-icon
-					width: 14px
-					height: 14px
-					.icon
-						font-size: 14px
-			&__descr
-				p
-					font-size: 15px
-					line-height: 1.35em
 	.catering-page
 		.skills
 			&__item
@@ -617,8 +609,29 @@
 				padding: 30px
 	.family-page
 		.family
+			&__item
+				padding: 30px 0
+			&__title
+				font-size: 20px
+				&:after
+					display: none
+			&__contacts
+				&-list
+					li
+						line-height: 1.25
+						span
+							font-size: 14px
+				&-icon
+					width: 14px
+					height: 14px
+					.icon
+						font-size: 14px
 			&__photo
 				height: 100px
+			&__descr
+				p
+					font-size: 15px
+					line-height: 1.35em
 	.family-single
 		.contacts
 			&__item
@@ -630,6 +643,9 @@
 			&__meta
 				margin-top: 10px
 				margin-left: 0
+		.gallery
+			&__content
+				min-height: 320px
 		.menu
 			&__item
 				min-height: 60px
@@ -731,6 +747,9 @@
 				&-title
 					margin-left: 0
 					text-align: center
+		.gallery
+			&__content
+				min-height: 280px
 		.menu
 			&__item
 				flex-direction: column
