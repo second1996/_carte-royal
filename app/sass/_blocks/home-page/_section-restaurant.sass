@@ -1,14 +1,13 @@
 @import "vars"
 
 .h-family
-	[class*="col-"]:nth-last-child(-n+3)
-		.h-family__item
-			margin-bottom: 0
+	[class*="col-"]:nth-child(-n+3) .h-family__item
+		margin-top: 0
 	&__item
 		position: relative
 		overflow: hidden
 		height: 440px
-		margin-bottom: 20px
+		margin-top: 20px
 		border: 1px solid $border
 		&:hover
 			.h-family__logo

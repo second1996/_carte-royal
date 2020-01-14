@@ -101,6 +101,22 @@ $(document).ready(function(){
 			}
 		},
 	});
+	$(".promo__carousel").owlCarousel({
+		items: 1,
+		loop: true,
+		lazyLoad: true,
+		mouseDrag: false,
+		touchDrag: true,
+		nav: false,
+		dots: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
+		navText: [
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+		],
+	});
 
 	// Mobile navigation
 	var mNavHumb	= $('.s-header__humb');

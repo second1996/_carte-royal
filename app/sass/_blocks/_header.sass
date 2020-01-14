@@ -31,7 +31,7 @@
 		list-style: none
 		margin: 0
 		padding: 0
-		li
+		> li
 			position: relative
 			margin: 0 15px
 			&:after
@@ -45,7 +45,7 @@
 				background-color: $text
 				opacity: 0
 				transition: opacity .3s
-			a
+			> a
 				display: inline-block
 				color: $text
 				font-size: 14px
@@ -55,8 +55,41 @@
 			&:hover
 				&:after
 					opacity: 1
-				a
+				> a
 					color: $title
+				> ul
+					transform: translate(-17px, 26px)
+					visibility: visible
+					opacity: 1
+			> ul
+				position: absolute
+				top: 0
+				left: 0
+				width: 280px
+				padding-top: 20px
+				transform: translate(-17px, 0)
+				transition: transform .3s, opacity .3s
+				visibility: hidden
+				opacity: 0
+				li
+					background: $white
+					border: 1px solid $border
+					border-bottom: 0
+					&:last-child
+						border-bottom: 1px solid $border
+					a
+						display: block
+						color: $text
+						font-size: 14px
+						font-weight: 400
+						text-decoration: none
+						text-transform: uppercase
+						padding: 10px 16px
+						color: lighten($text, 10%)
+						transition: padding .3s
+						&:hover
+							padding-left: 22px
+							color: $title
 	&__middle
 		flex-basis: 110px
 		max-width: 100%

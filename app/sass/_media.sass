@@ -105,9 +105,6 @@
 						margin-right: 10px
 						&:first-child
 							margin-bottom: 10px
-		.gallery
-			&__content
-				min-height: 540px
 		.menu
 			&__title
 				font-size: 22px
@@ -117,6 +114,9 @@
 					.icon
 						font-size: 14px
 						margin-top: -2px
+		.gallery
+			&__content
+				min-height: 540px
 
 
 // ≥768px
@@ -202,6 +202,10 @@
 		&__photo
 			display: none
 	.h-family
+		[class*=col-]:nth-child(-n+3) .h-family__item
+			margin-top: 20px
+		[class*=col-]:nth-child(-n+2) .h-family__item
+			margin-top: 0
 		&__item
 			height: 400px
 		&__photo
@@ -271,9 +275,6 @@
 				text-align: center
 			&__text
 				margin-right: 0
-		.gallery
-			&__content
-				min-height: 400px
 		.menu
 			&__item
 				min-height: 80px
@@ -283,6 +284,9 @@
 					margin-top: 0
 			&__link
 				min-height: 80px
+		.gallery
+			&__content
+				min-height: 400px
 		.order
 			&__contacts
 				.location
@@ -397,6 +401,11 @@
 	.h-heroes
 		.owl-carousel_nav
 			display: none
+	.h-family
+		[class*="col-"]:nth-child(-n+2) .h-family__item
+			margin-top: 20px
+		[class*="col-"]:first-child .h-family__item
+			margin-top: 0
 	.catering
 		padding: 75px 0
 		&__logo
@@ -669,6 +678,16 @@
 				margin-right: -10px
 			[class*="col"]
 				padding: 0 10px
+	.thanks-page
+		&__icon
+			max-width: 50px
+		&__title
+			font-size: 32px
+		&__descr
+			font-size: 16px
+	.error-page
+		&__title
+			fnfont-size: 32px
 
 
 
