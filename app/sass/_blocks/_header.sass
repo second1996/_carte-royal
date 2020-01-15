@@ -2,6 +2,7 @@
 
 .s-header
 	position: relative
+	z-index: 10
 	border-bottom: 1px solid $border
 	background: $white
 	&__wrap
@@ -15,7 +16,7 @@
 		align-items: center
 		&-link
 			margin-right: 20px
-			color: $text
+			color: $title
 			font-size: 16px
 			line-height: 0
 			&:last-child
@@ -71,13 +72,13 @@
 				transition: transform .3s, opacity .3s
 				visibility: hidden
 				opacity: 0
-				li
+				> li
 					background: $white
 					border: 1px solid $border
 					border-bottom: 0
 					&:last-child
 						border-bottom: 1px solid $border
-					a
+					> a
 						display: block
 						color: $text
 						font-size: 14px
@@ -117,33 +118,74 @@
 		left: 0
 		right: 0
 		z-index: 9
+		width: 100%
 		border-bottom: 1px solid $border
 		background: inherit
-		transform: translate3d(0,-100px,0)
+		transform: translate3d(0,0,0)
 		opacity: 0
 		transition: transform .3s ease, opacity .3s ease
 		&__wrap
+			display: flex
+			justify-content: space-between
 			padding-top: 20px
 			padding-bottom: 20px
+		&__title
+			margin-bottom: 15px
+			color: $title
+			font-size: 18px
+			font-weight: 600
+			text-transform: uppercase
 		&__list
 			display: flex
-			justify-content: center
+			flex-direction: column
 			flex-wrap: wrap
 			li
-				margin: 5px 5vw 5px 0px
+				margin: 5px 0
 				font-size: 15px
 				a
 					font-weight: 400
 					text-transform: uppercase
+					transition: padding .3s
+					&:hover
+						padding-left: 6px
+		&__family
+			&-item
+				display: flex
+				flex-direction: column
+				margin-bottom: 30px
+			&-logo
+				display: flex
+				align-items: flex-end
+				width: 70px
+				height: 40px
+				margin-bottom: 6px
+				img
+					max-width: 60px
+					max-height: 40px
+			&-link
+				display: inline-block
+				color: $text
+				font-size: 15px
+				font-weight: 400
+				text-transform: uppercase
+				transition: padding .3s
+				&:hover
+					padding-left: 6px
 		&.is-active
 			visibility: visible
 			transform: none
 			opacity: 1
-			.m-nav__list
+			.m-nav__title
+				animation-delay: 0.025s
+				animation-duration: 0.5s
+				animation-fill-mode: both
+				animation-name: fadeInUp
+			.m-nav__list,
+			.m-nav__family
 				@for $i from 1 through 10
-					li:nth-child(#{$i})
-						animation-delay: $i*0.05s
+					li:nth-child(#{$i}),
+						animation-delay: $i*0.025s
 				li
 					animation-duration: 0.5s
 					animation-fill-mode: both
-					animation-name: fadeInDown
+					animation-name: fadeInUp

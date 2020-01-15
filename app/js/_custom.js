@@ -147,6 +147,13 @@ $(document).ready(function(){
 		return false;
 	});
 
+	// Scroll to up
+	$('.s-footer__up-btn').click(
+		function (e) {
+			$('html, body').animate({scrollTop: '0px'}, 1000);
+		}
+	);
+
 	// Bootstrap Tabs hash
 	if (location.hash !== '') $('a[href="' + location.hash + '"]').tab('show');
 	return $('a[data-toggle="tab"]').on('shown', function(e) {

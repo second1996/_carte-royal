@@ -178,15 +178,19 @@
 		&__btn
 			padding: 10px 16px
 		.m-nav
-			top: 70px
-			&__list
-				flex-direction: column
-				align-items: center
-				li
-					margin-right: 0
+			top: 71px
+			&__wrap
+				padding-top: 0
+			&__title
+				margin-top: 30px
+			&__family
+				&-item
 					margin-bottom: 15px
-					&:last-child
-						margin-bottom: 0
+				&-logo
+					margin-bottom: 15px
+				&-link
+					font-size: 14px
+					line-height: 1.35em
 	.nav
 		&-link
 			padding: 10px 15px
@@ -354,13 +358,11 @@
 				&-item
 					padding-top: 0
 	.s-footer
-		&__logo
-			display: flex
-			justify-content: center
-			margin-bottom: 45px
+		&__brand
+			text-align: center
 		&__social
 			justify-content: center
-			margin-top: 45px
+			margin-bottom: 30px
 
 
 
@@ -519,6 +521,20 @@
 					// top: 5px
 			&__price
 				padding-left: 2px
+	.s-footer
+		&__up
+			margin-bottom: 30px
+		&__social
+			margin-bottom: 45px
+		&__nav
+			margin-bottom: 45px
+		&__office
+			text-align: center
+			&-item
+				flex-direction: column
+				align-items: center
+			&-icon
+				margin-bottom: 6px
 
 // ≥0px
 +media-breakpoint-down(xs)
@@ -546,6 +562,25 @@
 			flex-basis: 90px
 		&__btn
 			display: none
+		.m-nav
+			&__title
+				text-align: center
+			&__list
+				align-items: center
+				> li
+					margin: 0
+					margin-bottom: 5px
+					&:last-child
+						margin-bottom: 0
+			&__family
+				&-logo
+					display: none
+				&-item
+					align-items: center
+					margin-bottom: 10px
+				&-link
+					font-size: 15px
+					text-align: center
 	.form
 		&-group
 			margin-bottom: 15px
@@ -688,6 +723,14 @@
 	.error-page
 		&__title
 			fnfont-size: 32px
+	.s-footer
+		&__nav
+			text-align: center
+		&__copyright
+			text-align: center
+			&-text
+				display: block
+				margin-bottom: 10px
 
 
 
