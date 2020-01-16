@@ -49,6 +49,7 @@ gulp.task('scripts', function() {
 		'app/libs/fancybox-master/dist/jquery.fancybox.min.js', // Fancybox Lib
 		'app/libs/lazyload-12.4.0/dist/lazyload.min.js', // jQuery Lazy Lib
 		'node_modules/bootstrap/dist/js/bootstrap.min.js', // Bootstrap Tabs
+		'app/libs/Inputmask/jquery.inputmask.min.js', // Bootstrap Tabs
 		// 'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])

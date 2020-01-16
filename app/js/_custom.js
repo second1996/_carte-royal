@@ -132,6 +132,17 @@ $(document).ready(function(){
 		// Options will go here
 	});
 
+	// jQuery Inputmask
+	// $(":input").inputmask();
+	$('.form input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
+		"onincomplete": function() {
+			$('.form button[type=submit], .form input[type=submit]').attr('disabled', 'disabled');
+		},
+		"oncomplete": function() {
+			$('.form button[type=submit], .form input[type=submit]').removeAttr('disabled');
+		}
+	});
+
 	// Anchors Links
 	$('a[data-link^="anchor"]').bind('click.smoothscroll', function(){
 		var target = $(this).attr('href'),

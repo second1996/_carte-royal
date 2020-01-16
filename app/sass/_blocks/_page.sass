@@ -178,6 +178,32 @@
 			color: $white
 		&:active
 			background: darken($text, 10%)
+		&:disabled
+			cursor: not-allowed
+			border-color: darken($border, 5%)
+			background: $border
+			&:hover
+				color: $text
+	input[type="date"]::-webkit-inner-spin-button,
+	input[type="time"]::-webkit-inner-spin-button
+		display: none
+		-webkit-appearance: none
+	input[type="date"]:before
+		content: attr(placeholder) !important
+		color: rgba($text, 0.75)
+		margin-right: 0.5em
+	input[type="date"]:focus:before,
+	input[type="date"]:valid:before
+		content: ""
+	input[type="time"]:before
+		content: attr(placeholder) !important
+		color: rgba($text, 0.75)
+		margin-right: 0.5em
+	input[type="time"]:focus:before,
+	input[type="time"]:valid:before
+		content: ""
+
+
 
 // Page Heroes customize
 .p-heroes
