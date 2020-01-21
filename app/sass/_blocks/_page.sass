@@ -49,8 +49,11 @@
 				&:after
 					display: none
 			a
+				border-bottom: 1px solid $trsp
 				color: $text
+				transition: border .15s, color .15s
 				&:hover
+					border-bottom-color: $title
 					color: $title
 
 // Form customize
@@ -64,6 +67,41 @@
 		text-transform: uppercase
 	&-group
 		margin-bottom: 20px
+		&-append
+			display: flex
+			.form-control
+				flex: 1 1 0%
+			&-text
+				display: inline-block
+				height: 52px
+				padding: 0 15px
+				background: $border
+				font-size: 15px
+				line-height: 52px
+				text-transform: uppercase
+	&-fieldset
+		margin-top: 10px
+		padding-left: 20px
+		padding-right: 20px
+		border-width: 1px
+		border-color: $border
+		border-style: solid
+	&-legend
+		margin-bottom: 30px
+		color: $title
+		font-size: 26px
+		font-weight: 700
+		text-transform: uppercase
+	&-label
+		display: inline-block
+		margin-bottom: 10px
+		color: $title
+		font-size: 15px
+		font-weight: 700
+		text-transform: uppercase
+	&-required
+		color: red
+		font-weight: 400
 	&-control
 		position: relative
 		width: 100%
@@ -74,6 +112,7 @@
 		color: $text
 		font-size: 15px
 		line-height: 52px
+		font-weight: 400
 		transition: border-color .3s
 		&-icon
 			padding-left: 56px
@@ -99,7 +138,7 @@
 			margin-bottom: 10px
 			padding-left: 30px
 			font-size: 15px
-			font-weight: 300
+			font-weight: 400
 			line-height: 20px
 			cursor: pointer
 			&:before
@@ -130,7 +169,7 @@
 			margin-bottom: 10px
 			padding-left: 30px
 			font-size: 15px
-			font-weight: 300
+			font-weight: 400
 			line-height: 20px
 			cursor: pointer
 			&:before
@@ -167,6 +206,8 @@
 	&-submit
 		margin-top: 30px
 		text-align: center
+	label
+		cursor: pointer
 	input[type="submit"],
 	button[type="submit"]
 		border-color: #e1b000
@@ -202,7 +243,13 @@
 	input[type="time"]:focus:before,
 	input[type="time"]:valid:before
 		content: ""
-
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	/* Firefox */
+	input[type=number]
+		-moz-appearance:textfield
 
 
 // Page Heroes customize

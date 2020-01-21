@@ -81,6 +81,7 @@
 						color: $white
 					&.disabled
 						opacity: 0
+						visibility: hidden
 				.owl-prev,
 				.owl-next
 					position: absolute
@@ -106,8 +107,11 @@
 					.icon
 						transform: rotate(-90deg)
 		&__photo
+			position: relative
 			display: block
 			height: 176px
+			&:hover
+				cursor: zoom-in
 			img
 				display: block
 				max-width: 100%

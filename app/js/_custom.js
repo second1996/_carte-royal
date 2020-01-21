@@ -133,7 +133,17 @@ $(document).ready(function(){
 	});
 
 	// jQuery Inputmask
-	// $(":input").inputmask();
+	$(":input").inputmask();
+	$('.form #work-form-email').inputmask({
+		mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,4}]",
+		greedy: false,
+		definitions: {
+			'*': {
+				validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+				casing: "lower"
+			}
+		}
+	});
 	$('.form input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
 		"onincomplete": function() {
 			$('.form button[type=submit], .form input[type=submit]').attr('disabled', 'disabled');

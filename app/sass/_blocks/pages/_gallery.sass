@@ -1,0 +1,277 @@
+@import vars
+
+.gallery-page
+	.gallery
+		[class*="col"]
+			margin-top: 50px
+			&:nth-child(-n+3)
+				margin-top: 0
+		&__item
+			// &:hover
+			// 	.gallery__photo
+			// 		&:after
+			// 			opacity: 0.65
+			// 		a
+			// 			visibility: visible
+			// 			opacity: 1
+		&__photo
+			position: relative
+			height: 325px
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 0
+				display: block
+				width: 100%
+				height: 100%
+				background-color: $text
+				opacity: 0
+				transition: opacity .3s
+			&:hover
+				&:after
+					opacity: 0.65
+				a
+					visibility: visible
+					opacity: 1
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+			a
+				position: absolute
+				visibility: hidden
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 1
+				display: flex
+				align-items: center
+				justify-content: center
+				opacity: 0
+				transition: opacity .3s
+				svg
+					display: block
+					margin: 0 auto
+					font-size: 22px
+				span
+					color: $white
+					font-size: 16px
+					font-weight: 300
+					text-align: center
+					transition: color .3s
+					&:hover
+						color: $accent
+		&__meta
+			display: flex
+			flex-wrap: wrap
+			margin-top: 25px
+			&-date
+				color: #7e7e7e
+				font-size: 14px
+				font-weight: 300
+				line-height: 1.5
+				text-transform: uppercase
+				white-space: nowrap
+				&:after
+					content: ''
+					display: inline-block
+					vertical-align: middle
+					width: 3px
+					height: 3px
+					margin: 0 8px
+					background-color: #bfbfbf
+			&-family
+				line-height: 1.25
+				text-transform: uppercase
+				a
+					border-bottom: 1px solid $trsp
+					color: #7e7e7e
+					font-size: 14px
+					font-weight: 300
+					transition: $trs-all
+					&:hover
+						border-bottom: 1px solid $text
+						color: $text
+		&__title
+			margin-top: 5px
+			a
+				font-size: 22px
+			&:after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 16px
+				height: 10px
+				background: url('../img/icons/right-arrow.svg') no-repeat center/cover
+				transform: translate3d(0,-1px,0)
+				opacity: 0
+				transition: transform .3s, opacity .3s
+				pointer-events: none
+			&:hover
+				&:after
+					transform: translate3d(10px,-1px,0)
+					opacity: 1
+
+.gallery-single
+	position: relative
+	z-index: 0
+	background-repeat: no-repeat
+	.section-title
+		margin-bottom: 0
+	hr
+		margin: 20px 0
+	.gs
+		&-bg
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: 0
+			width: 100%
+			height: 650px
+			background-repeat: no-repeat
+			background-size: cover
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				z-index: -1
+				height: 650px
+				background: linear-gradient(to top, $white 0%, $trsp 100%)
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: -1
+				background: rgba($white, 0.65)
+		&-heroes
+			position: relative
+			z-index: 1
+			&__meta
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				margin-bottom: 15px
+				&-date
+					color: #9f9f9f
+					font-weight: 300
+					line-height: 1.25
+					text-transform: uppercase
+					white-space: nowrap
+					&:after
+						content: ''
+						display: inline-block
+						vertical-align: middle
+						width: 3px
+						height: 3px
+						margin: 0 8px
+						background-color: #bfbfbf
+				&-family
+					line-height: 1.25
+					text-transform: uppercase
+					a
+						border-bottom: 1px solid $trsp
+						color: #9f9f9f
+						font-weight: 300
+						transition: $trs-all
+						&:hover
+							border-bottom: 1px solid $text
+							color: $text
+			&__title
+				margin-bottom: 0
+		&-video
+			position: relative
+			z-index: 1
+			margin-bottom: 75px
+			[class*="col"]
+				margin-top: 20px
+				&:nth-child(-n+4)
+					margin-top: 0
+			&__item
+				position: relative
+				&:hover
+					.gs-video__overlay
+						opacity: 1
+			&__overlay
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: rgba($text, 0.65)
+				opacity: 0
+				transition: opacity .3s
+				&:hover
+					visibility: visible
+					opacity: 1
+			&__btn
+				position: absolute
+				top: 50%
+				left: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 60px
+				height: 60px
+				border-radius: 50%
+				box-shadow: 0 0 0 0 rgba($white, 1)
+				background-color: $white
+				transform: translate(-50%, -50%)
+				animation: pulse 1.5s infinite
+				.icon
+					margin-left: 5px
+					color: $text
+					font-size: 20px
+					transition: color .5s ease
+			&__poster
+				height: 220px
+				img
+					display: block
+					width: 100%
+					height: 100%
+					object-fit: cover
+			&__link
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				outline: none
+		&-photo
+			position: relative
+			z-index: 1
+			&__grid
+				margin: -10px -10px 0
+				&:after
+					content: ''
+					display: block
+					clear: both
+			&__sizer,
+			&__item
+				width: 25%
+				padding: 10px
+			&__item
+				float: left
+				a
+					outline: none
+					cursor: zoom-in
+				img
+					display: block
+					max-width: 100%
+
+@keyframes pulse
+	0%
+		box-shadow: 0 0 0 0 rgba($white, 0.5)
+	70%
+		box-shadow: 0 0 0 20px rgba(0,0,0, 0)
+	100%
+		box-shadow: 0 0 0 0 rgba(0,0,0, 0)

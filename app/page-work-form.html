@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Анкета на роботу – Carte Royal</title>
+	<meta name="description" content="Розробка сайту Carte Royal">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+
+	<header class="s-header">
+		<div class="container">
+			<div class="row justify-content-between align-items-center s-header__wrap">
+				<div class="col s-header__left order-sm-0 order-1">
+					<button class="s-header__humb order-sm-0 order-1">
+						<div class="s-header__humb-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</button>
+					<div class="s-header__social order-sm-1 order-0">
+						<a href="https://www.instagram.com/carteroyal.if/" class="s-header__social-link" title="Instagram сторінка" rel="nofollow"><svg class="icon icon-instagram"><use xlink:href="../img/icons/sprite.svg#icon-instagram"></use></svg></a>
+						<a href="https://www.facebook.com/CarteRoyal/" class="s-header__social-link" title="Facebook спільнота" rel="nofollow"><svg class="icon icon-facebook"><use xlink:href="../img/icons/sprite.svg#icon-facebook"></use></svg></a>
+						<a href="https://www.youtube.com/results?search_query=%D1%88%D0%B0%D1%82%D0%BE+%D1%80%D0%BE%D1%8F%D0%BB%D1%8C+%D1%96%D0%B2%D0%B0%D0%BD%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA" class="s-header__social-link" title="YouTube канал" rel="nofollow"><svg class="icon icon-youtube"><use xlink:href="../img/icons/sprite.svg#icon-youtube"></use></svg></a>
+					</div>
+				</div>
+				<div class="col-4 s-header__menu-left order-sm-1">
+					<ul class="s-header__nav">
+						<li><a href="page-family.html">Заклади</a></li>
+						<li><a href="page-banquet.html">Банкетні зали</a></li>
+						<li><a href="page-catering.html">Кейтеринг</a></li>
+					</ul>
+				</div>
+				<div class="col-1 s-header__middle order-sm-2 order-0">
+					<div class="s-header__logo">
+						<a href="/"><img src="img/logotype.svg" class="img-responsive" alt="Carte Royal"></a>
+					</div>
+				</div>
+				<div class="col-4 s-header__menu-right order-sm-3">
+					<ul class="s-header__nav">
+						<li><a href="page-about-us.html">Про нас</a></li>
+						<li><a href="#">Доставка їжі</a></li>
+						<li><a href="page-contacts.html">Контакти</a></li>
+					</ul>
+				</div>
+				<div class="col s-header__right order-sm-4">
+					<a href="#" class="btn s-header__btn">Доставка <svg class="icon icon-delivery"><use xlink:href="../img/icons/sprite.svg#icon-delivery"></use></svg></a>
+				</div>
+			</div>
+		</div>
+		<!-- Start Mobile navigation -->
+		<div class="m-nav">
+			<div class="container">
+				<div class="m-nav__wrap">
+					<ul class="m-nav__list">
+						<li><a href="/">Головна</a></li>
+						<li><a href="page-about-us.html">Про нас</a></li>
+						<li><a href="page-family.html">Заклади</a></li>
+						<li><a href="page-banquet.html">Банкетні зали</a></li>
+						<li><a href="page-catering.html">Кейтеринг</a></li>
+						<li><a href="page-contacts.html">Контакти</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Mobile navigation -->
+	</header>
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ul class="breadcrumbs__list">
+				<li><a href="/">Головна сторінка</a></li>
+				<li>Анкета на роботу</li>
+			</ul>
+		</div>
+	</div>
+
+	<main class="main-page">
+
+		<!-- Start Section: Page title -->
+		<section class="p-heroes">
+			<div class="p-heroes__wrap lazy" data-bg="url(img/@2x/about-us-heroes.jpg)">
+				<h1 class="p-heroes__title">Анкета на роботу</h1>
+				<span class="p-heroes__brand">Carte Royal</span>
+			</div>
+		</section>
+		<!-- End Section: Page title -->
+
+		<!-- Start Page content -->
+		<article class="main-content pt-150 pb-150">
+			<div class="container">
+				<form class="work-form form">
+					<div class="row">
+						<div class="form-group col-lg-6 col-sm-6">
+							<label class="form-label" for="work-form-name">Ваше прізвище, ім'я та по батькові <span class="form-required" title="Це поле обов'язкове">*</span></label>
+							<input type="text" class="form-control" id="work-form-name" name="work-form-name" required>
+						</div><!-- /.form-group -->
+						<div class="form-group col-lg-6 col-sm-6">
+							<label class="form-label" for="work-form-birthday">Дата народження <span class="form-required" title="Це поле обов'язкове">*</span></label>
+							<input type="text" class="form-control" data-inputmask-mask="99/99/9999" id="work-form-birthday" name="work-form-name" required>
+						</div><!-- /.form-group -->
+						<div class="form-group col-lg-6 col-sm-6">
+							<label class="form-label" for="work-form-photo">Ваше фото <span class="form-required" title="Це поле обов'язкове">*</span></label>
+							<div class="alert"></div>
+							<div id='img_contain'>
+								<img id="blah" src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="Ваше фото для анкети">
+							</div> 
+							<div class="input-group">
+								<div class="custom-file">
+									<input type="file" id="work-form-photo" class="imgInp custom-file-input" required>
+									<label class="custom-file-label" for="work-form-photo">Choose file</label>
+								</div>
+							</div>
+						</div><!-- /.form-group -->
+						<div class="form-group col-lg-3 col-sm-6">
+							<label class="form-label" for="work-form-marital">Сімейний стан <span class="form-required" title="Це поле обов'язкове">*</span></label>
+							<div class="form-radio" id="work-form-marital">
+								<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-1" value="У шлюбі">
+								<label class="form-radio-label" for="work-form-marital-1">У шлюбі</label>
+								<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-2" value="Не в шлюбі">
+								<label class="form-radio-label" for="work-form-marital-2">Не в шлюбі</label>
+								<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-3" value="Розлучений (-а)">
+								<label class="form-radio-label" for="work-form-marital-3">Розлучений (-а)</label>
+							</div><!-- /.form-radio -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-lg-3 col-sm-6">
+							<label class="form-label" for="work-form-child">Чи є у Вас діти? <span class="form-required" title="Це поле обов'язкове">*</span></label>
+							<div class="form-radio" id="work-form-child">
+								<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-1" value="Так">
+								<label class="form-radio-label" for="work-form-child-1">Так</label>
+								<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-2" value="Ні">
+								<label class="form-radio-label" for="work-form-child-2">Ні</label>
+							</div><!-- /.form-radio -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<fieldset class="form-fieldset">
+								<legend class="form-legend">Робота</legend>
+								<div class="form-group">
+									<label class="form-label" for="work-form-job">Ким би Ви хотіли працювати? <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-check" id="work-form-job">
+										<div class="row">
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-1" value="Офіціант">
+												<label class="form-check-label" for="work-form-job-1">Офіціант</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-2" value="Адміністратор закладу">
+												<label class="form-check-label" for="work-form-job-2">Бармен</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-3" value="Менеджер по роботі з клієнтами">
+												<label class="form-check-label" for="work-form-job-3">Менеджер по роботі з клієнтами</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-4" value="Управляючий">
+												<label class="form-check-label" for="work-form-job-4">Управляючий</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-5" value="Системний адміністратор">
+												<label class="form-check-label" for="work-form-job-5">Системний адміністратор</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-6" value="Офіціант">
+												<label class="form-check-label" for="work-form-job-6">Офіціант</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-7" value="Адміністратор закладу">
+												<label class="form-check-label" for="work-form-job-7">Бармен</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-8" value="Менеджер по роботі з клієнтами">
+												<label class="form-check-label" for="work-form-job-8">Менеджер по роботі з клієнтами</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-9" value="Управляючий">
+												<label class="form-check-label" for="work-form-job-9">Управляючий</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-10" value="Системний адміністратор">
+												<label class="form-check-label" for="work-form-job-10">Системний адміністратор</label>
+											</div>
+										</div>
+									</div><!-- /.form-check -->
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-money">На який мінімальний рівень заробітної плати Ви розраховуєте? <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-group-append">
+										<input type="number" class="form-control" id="work-form-money" name="work-form-money" required>
+										<span class="form-group-append-text">грн</span>
+									</div>
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-hours">У якому режимі бажаєте / можете працювати? <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-check" id="work-form-hours">
+										<div class="row">
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-hours[]" id="work-form-hours-1" value="Неповний робочий день">
+												<label class="form-check-label" for="work-form-hours-1">Неповний робочий день</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-hours[]" id="work-form-hours-2" value="Повний (8-годинний) робочий день">
+												<label class="form-check-label" for="work-form-hours-2">Повний (8-годинний) робочий день</label>
+											</div>
+											<div class="col-md-4">
+												<input class="form-check-input" type="checkbox" name="work-form-hours[]" id="work-form-hours-3" value="Змінний режим роботи">
+												<label class="form-check-label" for="work-form-hours-3">Змінний режим роботи</label>
+											</div>
+										</div>
+									</div><!-- /.form-check -->
+								</div><!-- /.form-group -->
+							</fieldset><!-- /.form-fieldset -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<fieldset class="form-fieldset">
+								<legend class="form-legend">Контакті дані</legend>
+								<div class="row">
+									<div class="form-group col-lg-6 col-sm-6">
+										<label class="form-label" for="work-form-phone">Номер телефону <span class="form-required" title="Це поле обов'язкове">*</span></label>
+										<input type="tel" class="form-control" id="work-form-phone" name="work-form-phone" required>
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-6 col-sm-6">
+										<label class="form-label" for="work-form-email">E-mail адрес <span class="form-required" title="Це поле обов'язкове">*</span></label>
+										<input type="text" class="form-control" id="work-form-email" name="work-form-email" required>
+									</div><!-- /.form-group -->
+								</div>
+							</fieldset><!-- /.form-fieldset -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<fieldset class="form-fieldset">
+								<legend class="form-legend">Адреса реєстрації (за паспортом)</legend>
+								<div class="row">
+									<div class="form-group col-lg-3 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-city">Населений пункт <span class="form-required" title="Це поле обов'язкове">*</span></label>
+										<input type="text" class="form-control" id="work-form-p-adress-city" name="work-form-p-adress-city" required>
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-3 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-street">Вулиця <span class="form-required" title="Це поле обов'язкове">*</span></label>
+										<input type="text" class="form-control" id="work-form-p-adress-street" name="work-form-p-adress-street" required>
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-2 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-house">Будинок <span class="form-required" title="Це поле обов'язкове">*</span></label>
+										<input type="text" class="form-control" id="work-form-p-adress-city" name="work-form-p-adress-house" required>
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-2 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-corps">Корпус</label>
+										<input type="text" class="form-control" id="work-form-p-adress-corps" name="work-form-p-adress-corps">
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-2 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-flat">Квартира</label>
+										<input type="text" class="form-control" id="work-form-p-adress-flat" name="work-form-p-adress-flat">
+									</div><!-- /.form-group -->
+								</div>
+							</fieldset><!-- /.form-fieldset -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<fieldset class="form-fieldset">
+								<legend class="form-legend">Адреса фактичного проживання</legend>
+								<div class="row">
+									<div class="form-group col-lg-3 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-city">Населений пункт</label>
+										<input type="text" class="form-control" id="work-form-p-adress-city" name="work-form-p-adress-city">
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-3 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-street">Вулиця</label>
+										<input type="text" class="form-control" id="work-form-p-adress-street" name="work-form-p-adress-street">
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-2 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-house">Будинок</label>
+										<input type="text" class="form-control" id="work-form-p-adress-city" name="work-form-p-adress-house">
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-2 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-corps">Корпус</label>
+										<input type="text" class="form-control" id="work-form-p-adress-corps" name="work-form-p-adress-corps">
+									</div><!-- /.form-group -->
+									<div class="form-group col-lg-2 col-sm-6">
+										<label class="form-label" for="work-form-p-adress-flat">Квартира</label>
+										<input type="text" class="form-control" id="work-form-p-adress-flat" name="work-form-p-adress-flat">
+									</div><!-- /.form-group -->
+								</div>
+							</fieldset><!-- /.form-fieldset -->
+						</div><!-- /.form-group -->
+						<div class="col-12">
+							<div class="form-submit">
+								<input class="btn" type="submit" value="Надіслати">
+							</div>
+						</div><!-- /.col-12 (form-submit) -->
+					</div><!-- /.row -->
+				</form><!-- /.work-form -->
+			</div><!-- /.container -->
+		</article>
+		<!-- End Page content -->
+
+	</main>
+
+	<!-- Footer -->
+	<footer class="s-footer">
+		<div class="container">
+			<div class="s-footer__wrap row justify-content-between">
+				<div class="col-12 s-footer__up">
+					<button class="s-footer__up-btn btn" title="Вгору"><svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg><span>Вгору</span></button>
+				</div>
+				<div class="col-lg-3 col-12 s-footer__brand">
+					<img class="s-footer__brand-logo" src="img/logotype-white.svg" alt="">
+					<p class="s-footer__brand-descr">Carte Royal - мережа, до якої входять резиденція Шато Роял, ресторація Буржуй, м’ясний клуб Rondel, Fazenda family park, шинок Калина, кейтерингова компанія VipSM та кондитерське ательє Vanil.</p>
+					<div class="s-footer__social">
+						<a href="https://www.instagram.com/carteroyal.if/" class="s-footer__social-link" title="Instagram сторінка" rel="nofollow"><svg class="icon icon-instagram"><use xlink:href="../img/icons/sprite.svg#icon-instagram"></use></svg></a>
+						<a href="https://www.facebook.com/CarteRoyal/" class="s-footer__social-link" title="Facebook спільнота" rel="nofollow"><svg class="icon icon-facebook"><use xlink:href="../img/icons/sprite.svg#icon-facebook"></use></svg></a>
+						<a href="https://www.youtube.com/results?search_query=%D1%88%D0%B0%D1%82%D0%BE+%D1%80%D0%BE%D1%8F%D0%BB%D1%8C+%D1%96%D0%B2%D0%B0%D0%BD%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA" class="s-footer__social-link" title="YouTube канал" rel="nofollow"><svg class="icon icon-youtube"><use xlink:href="../img/icons/sprite.svg#icon-youtube"></use></svg></a>
+					</div>
+				</div>
+				<div class="col-lg-auto col-md-4 col-sm-6 s-footer__nav">
+					<div class="s-footer__title">Швидкі посилання</div>
+					<ul class="s-footer__nav-list">
+						<li><a href="page-about-us.html">Про нас</a></li>
+						<li><a href="page-family.html">Наші заклади</a></li>
+						<li><a href="page-banquet.html">Банкетні зали</a></li>
+						<li><a href="page-catering.html">Кейтеринг</a></li>
+						<li><a href="page-contacts.html">Контакти</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-auto col-md-4 col-sm-6 s-footer__nav">
+					<div class="s-footer__title">Мережа закладів</div>
+					<ul class="s-footer__nav-list">
+						<li><a class="m-nav__family-link" href="page-family-single-01.html">Заміська резиденція “Шато Роял”</a></li>
+						<li><a class="m-nav__family-link" href="page-family-single-02.html">М'ясний клуб “Рондель”</a></li>
+						<li><a class="m-nav__family-link" href="page-family-single-07.html">Ресторан “Vinoteka”</a></li>
+						<li><a class="m-nav__family-link" href="page-family-single-03.html">Fazenda family park</a></li>
+						<li><a class="m-nav__family-link" href="page-family-single-04.html">Шинок “Калина”</a></li>
+						<li><a class="m-nav__family-link" href="page-family-single-05.html">Ресторація “Буржуй”</a></li>
+						<li><a class="m-nav__family-link" href="page-family-single-06.html">Event-hall “Velyur”</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-4 s-footer__office">
+					<div class="s-footer__title">Центральний офіс</div>
+					<div class="s-footer__office-item">
+						<div class="s-footer__office-icon">
+							<svg class="icon icon-placeholder"><use xlink:href="../img/icons/sprite.svg#icon-placeholder"></use></svg>
+						</div>
+						<span class="s-footer__office-text">Івано-Франківськ, вул. Академіка Сахарова, 34</span>
+					</div>
+					<div class="s-footer__office-item">
+						<div class="s-footer__office-icon">
+							<svg class="icon icon-email"><use xlink:href="../img/icons/sprite.svg#icon-email"></use></svg>
+						</div>
+						<span class="s-footer__office-text"><a href="mailto:carteroyal.if@gmail.com" title="Написати листа">carteroyal.if@gmail.com</a></span>
+					</div>
+					<div class="s-footer__office-item">
+						<div class="s-footer__office-icon">
+							<svg class="icon icon-phone"><use xlink:href="../img/icons/sprite.svg#icon-phone"></use></svg>
+						</div>
+						<span class="s-footer__office-text"><a href="tel:+380670050057" title="Написати листа">+38 (067) 005-00-57</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="s-footer__copyright">
+			<div class="container">
+				<div class="row justify-content-sm-between">
+					<div class="col-sm-auto">
+						<span class="s-footer__copyright-text">&copy; 2020 Carte Royal. Всі права захищені</span>
+					</div>
+					<div class="col-sm-auto">
+						<a class="s-footer__copyright-madeby" href="https://marketing.aprostir.com" target="_blank">Made with ❤️ by A Prostir</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+	<script>
+	var workFormFile = $("#work-form-photo");
+	workFormFile.change(function(event) {
+		RecurFadeIn();
+		readURL(this);
+	});
+	workFormFile.on('click',function(event){
+		RecurFadeIn();
+	});
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			var filename = workFormFile.val();
+			filename = filename.substring(filename.lastIndexOf('\\')+1);
+			reader.onload = function(e) {
+				// debugger;
+				$('#blah').attr('src', e.target.result);
+				$('#blah').hide();
+				$('#blah').fadeIn(500);
+				$('.custom-file-label').text(filename);
+			}
+			reader.readAsDataURL(input.files[0]);
+		} 
+		$(".alert").removeClass("loading").hide();
+	}
+	function RecurFadeIn(){
+		console.log('ran');
+		FadeInAlert("Wait for it...");
+	}
+	function FadeInAlert(text){
+		$(".alert").show();
+		$(".alert").text(text).addClass("loading");
+	}
+	</script>
+</body>
+</html>

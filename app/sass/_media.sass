@@ -117,6 +117,17 @@
 		.gallery
 			&__content
 				min-height: 540px
+	.gallery-page
+		.gallery
+			[class*="col"]
+				&:nth-child(-n+3)
+					margin-top: 50px
+				&:nth-child(-n+2)
+					margin-top: 0
+	.gallery-single
+		.gs-video
+			&__poster
+				height: 175px
 
 
 // ≥768px
@@ -357,6 +368,24 @@
 			&__table
 				&-item
 					padding-top: 0
+	.gallery-single
+		.gs-video
+			[class*="col"]
+				&:nth-child(-n+4)
+					margin-top: 20px
+				&:nth-child(-n+3)
+					margin-top: 0
+			&__btn
+				width: 45px
+				height: 45px
+				.icon
+					font-size: 16px
+			&__poster
+				height: 140px
+		.gs-photo
+			&__item,
+			&__sizer
+				width: 33.333%
 	.s-footer
 		&__brand
 			text-align: center
@@ -515,12 +544,16 @@
 			&__label
 				padding-bottom: 2px
 				font-size: 10px
-			&__label-icon
-				&--hot,
-				&--vegan
-					// top: 5px
 			&__price
 				padding-left: 2px
+	.gallery-single
+		.gs-video
+			&__poster
+				height: 100px
+		.gs-photo
+			&__item,
+			&__sizer
+				width: 33.333%
 	.s-footer
 		&__up
 			margin-bottom: 30px
@@ -713,6 +746,43 @@
 				margin-right: -10px
 			[class*="col"]
 				padding: 0 10px
+	.gallery-page
+		.gallery
+			[class*="col"]
+				margin-top: 40px
+				&:nth-child(-n+3)
+					margin-top: 40px
+				&:nth-child(-n+1)
+					margin-top: 0
+			&__photo
+				height: 300px
+			&__meta
+				margin-top: 15px
+			&__title
+				a
+					font-size: 20px
+				&:after
+					display: none
+	.gallery-single
+		.gs-video
+			.row
+				margin-left: -5px
+				margin-right: -5px
+			[class*="col"]
+				margin-top: 10px
+				padding: 0 5px
+				&:nth-child(-n+4)
+					margin-top: 10px
+				&:nth-child(-n+2)
+					margin-top: 0
+			&__poster
+				height: 130px
+		.gs-photo
+			&__item,
+			&__sizer
+				width: 50%
+			&__item
+				padding: 5px
 	.thanks-page
 		&__icon
 			max-width: 50px
@@ -848,6 +918,10 @@
 						font-size: 14px
 				&-title
 					margin-bottom: 5px
+	.gallery-page
+		.gallery
+			&__photo
+				height: 260px
 
 
 
