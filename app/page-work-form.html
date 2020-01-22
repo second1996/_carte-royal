@@ -102,17 +102,17 @@
 		<!-- Start Page content -->
 		<article class="main-content pt-150 pb-150">
 			<div class="container">
-				<form class="work-form form">
+				<form class="work-form form" id="vacancy-resume">
 					<div class="row">
 						<div class="form-group col-md-auto">
 							<label class="form-label" for="work-form-photo">Ваше фото <span class="form-required" title="Це поле обов'язкове">*</span></label>
-							<div class="form-photo">
+							<div class="form-photo" data-loader="spinner">
 								<img id="work-form-photo-preview" class="lazy" data-src="img/@2x/no_photo.png" alt="Ваше фото для анкети">
 							</div> 
 							<div class="form-group">
 								<div class="form-file">
 									<input type="file" id="work-form-photo" class="form-file-input" required>
-									<label class="form-file-label" for="work-form-photo">Оберіть файл</label>
+									<label class="form-file-label" for="work-form-photo">Завантажити файл</label>
 								</div>
 							</div>
 						</div><!-- /.form-group -->
@@ -235,7 +235,7 @@
 										<input type="tel" class="form-control" id="work-form-phone" name="work-form-phone" required>
 									</div><!-- /.form-group -->
 									<div class="form-group col-lg-6 col-sm-6">
-										<label class="form-label" for="work-form-email">E-mail адрес <span class="form-required" title="Це поле обов'язкове">*</span></label>
+										<label class="form-label" for="work-form-email">Електронна пошта <span class="form-required" title="Це поле обов'язкове">*</span></label>
 										<input type="text" class="form-control" id="work-form-email" name="work-form-email" required>
 									</div><!-- /.form-group -->
 								</div>
