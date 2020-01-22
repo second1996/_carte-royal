@@ -104,46 +104,49 @@
 			<div class="container">
 				<form class="work-form form">
 					<div class="row">
-						<div class="form-group col-lg-6 col-sm-6">
-							<label class="form-label" for="work-form-name">Ваше прізвище, ім'я та по батькові <span class="form-required" title="Це поле обов'язкове">*</span></label>
-							<input type="text" class="form-control" id="work-form-name" name="work-form-name" required>
-						</div><!-- /.form-group -->
-						<div class="form-group col-lg-6 col-sm-6">
-							<label class="form-label" for="work-form-birthday">Дата народження <span class="form-required" title="Це поле обов'язкове">*</span></label>
-							<input type="text" class="form-control" data-inputmask-mask="99/99/9999" id="work-form-birthday" name="work-form-name" required>
-						</div><!-- /.form-group -->
-						<div class="form-group col-lg-6 col-sm-6">
+						<div class="form-group col-md-auto">
 							<label class="form-label" for="work-form-photo">Ваше фото <span class="form-required" title="Це поле обов'язкове">*</span></label>
-							<div class="alert"></div>
-							<div id='img_contain'>
-								<img id="blah" src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="Ваше фото для анкети">
+							<div class="form-photo">
+								<img id="work-form-photo-preview" class="lazy" data-src="img/@2x/no_photo.png" alt="Ваше фото для анкети">
 							</div> 
-							<div class="input-group">
-								<div class="custom-file">
-									<input type="file" id="work-form-photo" class="imgInp custom-file-input" required>
-									<label class="custom-file-label" for="work-form-photo">Choose file</label>
+							<div class="form-group">
+								<div class="form-file">
+									<input type="file" id="work-form-photo" class="form-file-input" required>
+									<label class="form-file-label" for="work-form-photo">Оберіть файл</label>
 								</div>
 							</div>
 						</div><!-- /.form-group -->
-						<div class="form-group col-lg-3 col-sm-6">
-							<label class="form-label" for="work-form-marital">Сімейний стан <span class="form-required" title="Це поле обов'язкове">*</span></label>
-							<div class="form-radio" id="work-form-marital">
-								<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-1" value="У шлюбі">
-								<label class="form-radio-label" for="work-form-marital-1">У шлюбі</label>
-								<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-2" value="Не в шлюбі">
-								<label class="form-radio-label" for="work-form-marital-2">Не в шлюбі</label>
-								<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-3" value="Розлучений (-а)">
-								<label class="form-radio-label" for="work-form-marital-3">Розлучений (-а)</label>
-							</div><!-- /.form-radio -->
-						</div><!-- /.form-group -->
-						<div class="form-group col-lg-3 col-sm-6">
-							<label class="form-label" for="work-form-child">Чи є у Вас діти? <span class="form-required" title="Це поле обов'язкове">*</span></label>
-							<div class="form-radio" id="work-form-child">
-								<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-1" value="Так">
-								<label class="form-radio-label" for="work-form-child-1">Так</label>
-								<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-2" value="Ні">
-								<label class="form-radio-label" for="work-form-child-2">Ні</label>
-							</div><!-- /.form-radio -->
+						<div class="form-group col-md">
+							<div class="row">
+								<div class="form-group col-12">
+									<label class="form-label" for="work-form-name">Ваше прізвище, ім'я та по батькові <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<input type="text" class="form-control" id="work-form-name" name="work-form-name" required>
+								</div><!-- /.form-group -->
+								<div class="form-group col-12">
+									<label class="form-label" for="work-form-birthday">Дата народження <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<input type="text" class="form-control" data-inputmask-mask="99/99/9999" id="work-form-birthday" name="work-form-name" required>
+								</div><!-- /.form-group -->
+								<div class="form-group col-lg-6 col-sm-6">
+									<label class="form-label" for="work-form-marital">Сімейний стан <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-radio" id="work-form-marital">
+										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-1" value="У шлюбі">
+										<label class="form-radio-label" for="work-form-marital-1">У шлюбі</label>
+										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-2" value="Не в шлюбі">
+										<label class="form-radio-label" for="work-form-marital-2">Не в шлюбі</label>
+										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-3" value="Розлучений (-а)">
+										<label class="form-radio-label" for="work-form-marital-3">Розлучений (-а)</label>
+									</div><!-- /.form-radio -->
+								</div><!-- /.form-group -->
+								<div class="form-group col-lg-6 col-sm-6">
+									<label class="form-label" for="work-form-child">Чи є у Вас діти? <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-radio" id="work-form-child">
+										<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-1" value="Так">
+										<label class="form-radio-label" for="work-form-child-1">Так</label>
+										<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-2" value="Ні">
+										<label class="form-radio-label" for="work-form-child-2">Ні</label>
+									</div><!-- /.form-radio -->
+								</div><!-- /.form-group -->
+							</div>
 						</div><!-- /.form-group -->
 						<div class="form-group col-12">
 							<fieldset class="form-fieldset">
@@ -292,6 +295,118 @@
 								</div>
 							</fieldset><!-- /.form-fieldset -->
 						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<fieldset class="form-fieldset">
+								<legend class="form-legend">Освіта</legend>
+								<div class="form-group">
+									<label class="form-label" for="work-form-education">Освіта <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-radio" id="work-form-education">
+										<div class="row">
+											<div class="col-lg col-sm-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-1" value="Базова">
+												<label class="form-radio-label" for="work-form-education-1">Базова</label>
+											</div>
+											<div class="col-lg col-sm-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-2" value="Середня">
+												<label class="form-radio-label" for="work-form-education-2">Середня</label>
+											</div>
+											<div class="col-lg col-sm-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-3" value="Середня спеціальна">
+												<label class="form-radio-label" for="work-form-education-3">Середня спеціальна</label>
+											</div>
+											<div class="col-lg col-sm-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-4" value="Базова вища">
+												<label class="form-radio-label" for="work-form-education-4">Базова вища</label>
+											</div>
+											<div class="col-lg col-sm-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-5" value="Вища">
+												<label class="form-radio-label" for="work-form-education-5">Вища</label>
+											</div>
+										</div>
+									</div><!-- /.form-radio -->
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-education-comments">Коментарі (форма навчання, дод. освіта, кваліфікація)</label>
+									<textarea class="form-textarea" name="work-form-education-comments" id="work-form-education-comments" rows="6"></textarea>
+								</div><!-- /.form-group -->
+							</fieldset><!-- /.form-fieldset -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<fieldset class="form-fieldset">
+								<legend class="form-legend">Додаткова інформація</legend>
+								<div class="form-group">
+									<label class="form-label" for="work-form-military">Відношення до військової служби</label>
+									<div class="form-radio" id="work-form-military">
+										<div class="row">
+											<div class="col-lg-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-military[]" id="work-form-military-1" value="Служив">
+												<label class="form-radio-label" for="work-form-military-1">Служив</label>
+											</div>
+											<div class="col-lg-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-military[]" id="work-form-military-2" value="Не служив">
+												<label class="form-radio-label" for="work-form-military-2">Не служив</label>
+											</div>
+										</div>
+									</div><!-- /.form-radio -->
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-education-comments">Попередні місця роботи <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-description">Вкажіть, будь ласка, попередні місця роботи, стаж та посаду</div>
+									<textarea class="form-textarea" name="work-form-education-comments" id="work-form-education-comments" rows="6"></textarea>
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-pc-skills">Навички користування ПК <span class="form-required" title="Це поле обов'язкове">*</span></label>
+									<div class="form-radio" id="work-form-pc-skills">
+										<div class="row">
+											<div class="col-lg-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-pc-skills[]" id="work-form-pc-skills-1" value="Користувач">
+												<label class="form-radio-label" for="work-form-pc-skills-1">Користувач</label>
+											</div>
+											<div class="col-lg-4 col-6">
+												<input class="form-radio-input" type="radio" name="work-form-pc-skills[]" id="work-form-pc-skills-2" value="Впевнений користувач">
+												<label class="form-radio-label" for="work-form-pc-skills-2">Впевнений користувач</label>
+											</div>
+										</div>
+									</div><!-- /.form-radio -->
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-languages">Знання іноземних мов</label>
+									<div class="form-description">Вкажіть, будь ласка, перелік мов і рівень володіння</div>
+									<textarea class="form-textarea" name="work-form-languages" id="work-form-languages" rows="6"></textarea>
+								</div><!-- /.form-group -->
+								<div class="form-group">
+									<label class="form-label" for="work-form-car-skills">Управління автомобілем (Якщо так – відкриті категорії)</label>
+									<div class="form-check" id="work-form-car-skills">
+										<div class="row">
+											<div class="col">
+												<input class="form-check-input" type="checkbox" name="work-form-car-skills[]" id="work-form-car-skills-1" value="A">
+												<label class="form-check-label" for="work-form-car-skills-1">A</label>
+											</div>
+											<div class="col">
+												<input class="form-check-input" type="checkbox" name="work-form-car-skills[]" id="work-form-car-skills-2" value="B">
+												<label class="form-check-label" for="work-form-car-skills-2">B</label>
+											</div>
+											<div class="col">
+												<input class="form-check-input" type="checkbox" name="work-form-car-skills[]" id="work-form-car-skills-3" value="C">
+												<label class="form-check-label" for="work-form-car-skills-3">C</label>
+											</div>
+											<div class="col">
+												<input class="form-check-input" type="checkbox" name="work-form-car-skills[]" id="work-form-car-skills-4" value="D">
+												<label class="form-check-label" for="work-form-car-skills-4">D</label>
+											</div>
+											<div class="col">
+												<input class="form-check-input" type="checkbox" name="work-form-car-skills[]" id="work-form-car-skills-5" value="E">
+												<label class="form-check-label" for="work-form-car-skills-5">E</label>
+											</div>
+										</div>
+									</div><!-- /.form-radio -->
+								</div><!-- /.form-group -->
+							</fieldset><!-- /.form-fieldset -->
+						</div><!-- /.form-group -->
+						<div class="form-group col-12">
+							<label class="form-label" for="work-form-about-you">Напишіть щось про себе</label>
+							<textarea class="form-textarea" name="work-form-about-you" id="work-form-about-you" rows="6"></textarea>
+						</div><!-- /.form-group -->
 						<div class="col-12">
 							<div class="form-submit">
 								<input class="btn" type="submit" value="Надіслати">
@@ -384,11 +499,7 @@
 	<script>
 	var workFormFile = $("#work-form-photo");
 	workFormFile.change(function(event) {
-		RecurFadeIn();
 		readURL(this);
-	});
-	workFormFile.on('click',function(event){
-		RecurFadeIn();
 	});
 	function readURL(input) {
 		if (input.files && input.files[0]) {
@@ -397,22 +508,14 @@
 			filename = filename.substring(filename.lastIndexOf('\\')+1);
 			reader.onload = function(e) {
 				// debugger;
-				$('#blah').attr('src', e.target.result);
-				$('#blah').hide();
-				$('#blah').fadeIn(500);
-				$('.custom-file-label').text(filename);
+				var formPhoto = $('#work-form-photo-preview');
+				formPhoto.attr('src', e.target.result);
+				formPhoto.hide();
+				formPhoto.fadeIn(500);
+				$('.form-file-label').text(filename);
 			}
 			reader.readAsDataURL(input.files[0]);
 		} 
-		$(".alert").removeClass("loading").hide();
-	}
-	function RecurFadeIn(){
-		console.log('ran');
-		FadeInAlert("Wait for it...");
-	}
-	function FadeInAlert(text){
-		$(".alert").show();
-		$(".alert").text(text).addClass("loading");
 	}
 	</script>
 </body>
