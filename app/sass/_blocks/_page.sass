@@ -57,7 +57,37 @@
 					color: $title
 
 // Form customize
+.form-callout
+	&-info
+		display: block
+		margin-top: 30px
+		padding: 15px 20px
+		border: 3px solid #bbdeae
+		background-color: #e3ffd8
+		color: #000
+	&-warning
+		display: block
+		margin-top: 30px
+		padding: 15px 20px
+		border: 3px solid #ffecaa
+		background-color: #fff3cb
+		color: #000
+	&.hidden
+		display: none
 .form
+	.parsley-error
+		border: 1px solid red
+	.parsley-required,
+	.parsley-maxFileSize
+		position: absolute
+		top: 100%
+		left: 10px
+		margin-top: -6px
+		font-size: 14px
+		color: red
+	.parsley-maxFileSize
+		margin-top: 6px
+		left: 0
 	&-title
 		margin-top: 10px
 		margin-bottom: 20px
@@ -66,11 +96,19 @@
 		font-weight: 700
 		text-transform: uppercase
 	&-group
+		position: relative
 		margin-bottom: 20px
+		&-file
+			.parsley-required
+				margin-top: 6px
+				left: 0
 		&-append
+			position: relative
 			display: flex
 			.form-control
 				flex: 1 1 0%
+			.parsley-required
+				left: 0
 			&-text
 				display: inline-block
 				height: 52px

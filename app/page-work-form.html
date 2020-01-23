@@ -104,14 +104,14 @@
 			<div class="container">
 				<form class="work-form form" id="vacancy-resume">
 					<div class="row">
-						<div class="form-group col-md-auto">
+						<div class="form-group form-group-file col-md-auto">
 							<label class="form-label" for="work-form-photo">Ваше фото <span class="form-required" title="Це поле обов'язкове">*</span></label>
 							<div class="form-photo" data-loader="spinner">
 								<img id="work-form-photo-preview" class="lazy" data-src="img/@2x/no_photo.png" alt="Ваше фото для анкети">
 							</div> 
 							<div class="form-group">
 								<div class="form-file">
-									<input type="file" id="work-form-photo" class="form-file-input" required>
+									<input type="file" id="work-form-photo" class="form-file-input" required data-parsley-max-file-size="5000">
 									<label class="form-file-label" for="work-form-photo">Завантажити файл</label>
 								</div>
 							</div>
@@ -129,7 +129,7 @@
 								<div class="form-group col-lg-6 col-sm-6">
 									<label class="form-label" for="work-form-marital">Сімейний стан <span class="form-required" title="Це поле обов'язкове">*</span></label>
 									<div class="form-radio" id="work-form-marital">
-										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-1" value="У шлюбі">
+										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-1" value="У шлюбі" required>
 										<label class="form-radio-label" for="work-form-marital-1">У шлюбі</label>
 										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-2" value="Не в шлюбі">
 										<label class="form-radio-label" for="work-form-marital-2">Не в шлюбі</label>
@@ -140,7 +140,7 @@
 								<div class="form-group col-lg-6 col-sm-6">
 									<label class="form-label" for="work-form-child">Чи є у Вас діти? <span class="form-required" title="Це поле обов'язкове">*</span></label>
 									<div class="form-radio" id="work-form-child">
-										<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-1" value="Так">
+										<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-1" value="Так" required>
 										<label class="form-radio-label" for="work-form-child-1">Так</label>
 										<input class="form-radio-input" type="radio" name="work-form-child[]" id="work-form-child-2" value="Ні">
 										<label class="form-radio-label" for="work-form-child-2">Ні</label>
@@ -156,7 +156,7 @@
 									<div class="form-check" id="work-form-job">
 										<div class="row">
 											<div class="col-md-4">
-												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-1" value="Офіціант">
+												<input class="form-check-input" type="checkbox" name="work-form-job[]" id="work-form-job-1" value="Офіціант" required>
 												<label class="form-check-label" for="work-form-job-1">Офіціант</label>
 											</div>
 											<div class="col-md-4">
@@ -414,6 +414,14 @@
 						</div><!-- /.col-12 (form-submit) -->
 					</div><!-- /.row -->
 				</form><!-- /.work-form -->
+				<div class="form-callout form-callout-warning hidden">
+					<h4>Ой, щось пішло не так!</h4>
+					<p>Ця форма здається не заповнена :(<br> Перегляньте її, будь ласка, ще раз.</p>
+				</div>
+				<div class="form-callout form-callout-info hidden">
+					<h4>Вітаємо!</h4>
+					<p>Форма надіслена успішно :)</p>
+				</div>
 			</div><!-- /.container -->
 		</article>
 		<!-- End Page content -->
@@ -496,7 +504,30 @@
 	</footer>
 
 	<script src="js/scripts.min.js"></script>
+	<script src="libs/parsley/parsley.min.js"></script>
 	<script>
+	$(function () {
+		$('#vacancy-resume').parsley().on('field:validated', function() {
+			var ok = $('.parsley-error').length === 0;
+			$('.form-callout-info').toggleClass('hidden', !ok);
+			$('.form-callout-warning').toggleClass('hidden', ok);
+		});
+		window.Parsley.addValidator('maxFileSize', {
+			validateString: function(_value, maxSize, parsleyInstance) {
+				if (!window.FormData) {
+					alert('Оновіть свій браузер :/');
+					return true;
+				}
+				var files = parsleyInstance.$element[0].files;
+				return files.length != 1  || files[0].size <= maxSize * 1024;
+			},
+			requirementType: 'integer',
+			messages: {
+				en: 'Цей файл не повинен бути більшим за %s кб'
+			},
+		});
+	});
+
 	var workFormFile = $("#work-form-photo");
 	workFormFile.change(function(event) {
 		readURL(this);
