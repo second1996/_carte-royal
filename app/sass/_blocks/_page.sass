@@ -57,24 +57,31 @@
 					color: $title
 
 // Form customize
-.form-callout
-	&-info
-		display: block
-		margin-top: 30px
-		padding: 15px 20px
-		border: 3px solid #bbdeae
-		background-color: #e3ffd8
-		color: #000
-	&-warning
-		display: block
-		margin-top: 30px
-		padding: 15px 20px
-		border: 3px solid #ffecaa
-		background-color: #fff3cb
-		color: #000
-	&.hidden
-		display: none
 .form
+	&-callout
+		&-success
+			display: block
+			margin-top: 30px
+			padding: 15px 20px
+			border: 3px solid #bbdeae
+			background-color: #e3ffd8
+			color: #000
+		&-info
+			display: block
+			margin-top: 30px
+			padding: 15px 20px
+			border: 3px solid #c6e6ec
+			background-color: #e3faff
+			color: #000
+		&-warning
+			display: block
+			margin-top: 30px
+			padding: 15px 20px
+			border: 3px solid #ffecaa
+			background-color: #fff3cb
+			color: #000
+		&.hidden
+			display: none
 	.parsley-error
 		border: 1px solid red
 	.parsley-required,
@@ -86,8 +93,31 @@
 		font-size: 14px
 		color: red
 	.parsley-maxFileSize
+		display: block
 		margin-top: 6px
 		left: 0
+	.form-radio .parsley-error,
+	.form-radio.parsley-error 
+		border: 0
+		.form-radio-label:before
+			box-shadow: 0 0 0 1px red
+	.form-check .parsley-error 
+		border: 0
+		.form-check-label:before
+			box-shadow: 0 0 0 1px red
+	.form-control ~ .parsley-errors-list,
+	.form-radio ~ .parsley-errors-list,
+	.form-radio .parsley-errors-list,
+	.form-check .parsley-errors-list,
+	.form-textarea ~ .parsley-errors-list
+		display: none
+	.form-file-input.parsley-error
+		& ~ .parsley-errors-list .parsley-required
+			display: none
+		& ~ .form-file-label
+			border: 1px solid red
+			background-color: $white
+			color: red
 	&-title
 		margin-top: 10px
 		margin-bottom: 20px

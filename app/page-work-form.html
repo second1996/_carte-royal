@@ -131,7 +131,7 @@
 									<div class="form-radio" id="work-form-marital">
 										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-1" value="У шлюбі" required>
 										<label class="form-radio-label" for="work-form-marital-1">У шлюбі</label>
-										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-2" value="Не в шлюбі">
+										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-2" value="Не в шлюбі" required>
 										<label class="form-radio-label" for="work-form-marital-2">Не в шлюбі</label>
 										<input class="form-radio-input" type="radio" name="work-form-marital[]" id="work-form-marital-3" value="Розлучений (-а)">
 										<label class="form-radio-label" for="work-form-marital-3">Розлучений (-а)</label>
@@ -210,7 +210,7 @@
 									<div class="form-check" id="work-form-hours">
 										<div class="row">
 											<div class="col-md-4">
-												<input class="form-check-input" type="checkbox" name="work-form-hours[]" id="work-form-hours-1" value="Неповний робочий день">
+												<input class="form-check-input" type="checkbox" name="work-form-hours[]" id="work-form-hours-1" value="Неповний робочий день" required>
 												<label class="form-check-label" for="work-form-hours-1">Неповний робочий день</label>
 											</div>
 											<div class="col-md-4">
@@ -232,7 +232,7 @@
 								<div class="row">
 									<div class="form-group col-lg-6 col-sm-6">
 										<label class="form-label" for="work-form-phone">Номер телефону <span class="form-required" title="Це поле обов'язкове">*</span></label>
-										<input type="tel" class="form-control" id="work-form-phone" name="work-form-phone" required>
+										<input type="text" class="form-control" data-inputmask-mask="+38 (999) 99-99-999" id="work-form-phone" name="work-form-phone" required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$">
 									</div><!-- /.form-group -->
 									<div class="form-group col-lg-6 col-sm-6">
 										<label class="form-label" for="work-form-email">Електронна пошта <span class="form-required" title="Це поле обов'язкове">*</span></label>
@@ -303,7 +303,7 @@
 									<div class="form-radio" id="work-form-education">
 										<div class="row">
 											<div class="col-lg col-sm-4 col-6">
-												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-1" value="Базова">
+												<input class="form-radio-input" type="radio" name="work-form-education[]" id="work-form-education-1" value="Базова" required>
 												<label class="form-radio-label" for="work-form-education-1">Базова</label>
 											</div>
 											<div class="col-lg col-sm-4 col-6">
@@ -352,14 +352,14 @@
 								<div class="form-group">
 									<label class="form-label" for="work-form-education-comments">Попередні місця роботи <span class="form-required" title="Це поле обов'язкове">*</span></label>
 									<div class="form-description">Вкажіть, будь ласка, попередні місця роботи, стаж та посаду</div>
-									<textarea class="form-textarea" name="work-form-education-comments" id="work-form-education-comments" rows="6"></textarea>
+									<textarea class="form-textarea" name="work-form-education-comments" id="work-form-education-comments" rows="6" required></textarea>
 								</div><!-- /.form-group -->
 								<div class="form-group">
 									<label class="form-label" for="work-form-pc-skills">Навички користування ПК <span class="form-required" title="Це поле обов'язкове">*</span></label>
 									<div class="form-radio" id="work-form-pc-skills">
 										<div class="row">
 											<div class="col-lg-4 col-6">
-												<input class="form-radio-input" type="radio" name="work-form-pc-skills[]" id="work-form-pc-skills-1" value="Користувач">
+												<input class="form-radio-input" type="radio" name="work-form-pc-skills[]" id="work-form-pc-skills-1" value="Користувач" required>
 												<label class="form-radio-label" for="work-form-pc-skills-1">Користувач</label>
 											</div>
 											<div class="col-lg-4 col-6">
@@ -419,8 +419,12 @@
 					<p>Ця форма здається не заповнена :(<br> Перегляньте її, будь ласка, ще раз.</p>
 				</div>
 				<div class="form-callout form-callout-info hidden">
-					<h4>Вітаємо!</h4>
-					<p>Форма надіслена успішно :)</p>
+					<h4>Гарно!</h4>
+					<p>Форма заповнена правильно. Тепер залишилось <u>надіслати</u> нам анкету :)</p>
+				</div>
+				<div class="form-callout form-callout-success hidden">
+					<h4>Дякуємо!</h4>
+					<p>Анкета надіслана успішно. Гарного дня :)</p>
 				</div>
 			</div><!-- /.container -->
 		</article>

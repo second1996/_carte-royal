@@ -144,7 +144,7 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('.form input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
+	$('.form:not(#vacancy-resume) input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
 		"onincomplete": function() {
 			$('.form button[type=submit], .form input[type=submit]').attr('disabled', 'disabled');
 		},
