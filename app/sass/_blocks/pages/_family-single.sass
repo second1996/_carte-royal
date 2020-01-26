@@ -3,7 +3,8 @@
 .family-single
 	.contacts
 		padding: 25px 0
-		background: darken($text, 5%)
+		border-bottom: 1px solid $border
+		background: $white
 		&__item
 			display: flex
 			margin: 0 15px
@@ -14,26 +15,27 @@
 			width: 46px
 			min-width: 46px
 			height: 46px
-			background: $white
+			background: $text
 			.icon
-				fill: $text
+				fill: $white
 		&__meta
 			display: flex
 			flex-direction: column
 			margin-left: 20px
 			&-title
-				color: $white
+				color: $title
 			&-descr
 				max-width: 320px
-				color: $white
+				color: $text
 				font-weight: 300
 			&-phone a,
 			&-email a
-				color: $white
+				color: $text
 				font-weight: 300
 				&:hover
 					color: $accent
 	.about-us
+		// margin-top: 100px
 		&__title
 			margin-bottom: 30px
 			text-align: left
