@@ -144,14 +144,14 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('.form:not(#vacancy-resume) input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
-		"onincomplete": function() {
-			$('.form button[type=submit], .form input[type=submit]').attr('disabled', 'disabled');
-		},
-		"oncomplete": function() {
-			$('.form button[type=submit], .form input[type=submit]').removeAttr('disabled');
-		}
-	});
+	// $('.form:not(#vacancy-resume) input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
+	// 	"onincomplete": function() {
+	// 		$('.form button[type=submit], .form input[type=submit]').attr('disabled', 'disabled');
+	// 	},
+	// 	"oncomplete": function() {
+	// 		$('.form button[type=submit], .form input[type=submit]').removeAttr('disabled');
+	// 	}
+	// });
 
 	// Anchors Links
 	$('a[data-link^="anchor"]').bind('click.smoothscroll', function(){

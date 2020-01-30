@@ -101,7 +101,8 @@
 		border: 0
 		.form-radio-label:before
 			box-shadow: 0 0 0 1px red
-	.form-check .parsley-error 
+	.form-check .parsley-error,
+	.form-check.parsley-error
 		border: 0
 		.form-check-label:before
 			box-shadow: 0 0 0 1px red
@@ -109,6 +110,7 @@
 	.form-radio ~ .parsley-errors-list,
 	.form-radio .parsley-errors-list,
 	.form-check .parsley-errors-list,
+	.form-check ~ .parsley-errors-list,
 	.form-textarea ~ .parsley-errors-list
 		display: none
 	.form-file-input.parsley-error
