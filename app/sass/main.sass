@@ -3,8 +3,8 @@
 @import libs
 
 ::placeholder
-	color: rgba($text, 0.75)
-	font-size: 15px
+	color: $text
+	font-size: 14px
 	font-weight: 400
 
 ::selection
@@ -15,12 +15,6 @@ input, textarea
 	-webkit-appearance: none
 	border-radius: 0
 	outline: none
-	&:focus
-		border-color: $accent
-	// &:focus:required:invalid
-	// 	border-color: $text
-	// &:required:valid
-	// 	border-color: $text
 
 body
 	font-size: 16px
@@ -30,6 +24,24 @@ body
 	font-family: 'Roboto', sans-serif
 	overflow-x: hidden
 	color: $text
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		background-color: rgba(0,0,0, 0.75)
+		opacity: 0
+		visibility: hidden
+		transition: visibility .3s, opacity .3s
+	&.menu-open
+		position: relative
+		user-select: none
+		&:before
+			opacity: 1
+			visibility: visible
 a
 	color: $title
 	text-decoration: none

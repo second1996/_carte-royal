@@ -4,48 +4,6 @@
 
 // ≥992px
 +media-breakpoint-down(lg)
-	.s-header
-		&__left,
-		&__right
-			max-width: 160px
-		&__humb
-			display: flex
-			align-items: center
-			height: 20px
-			padding: 0
-			border: 0
-			background: $trsp
-			outline: 0
-			&-icon
-				display: flex
-				flex-direction: column
-				justify-content: space-between
-				width: 30px
-				height: 20px
-				&:hover
-					cursor: pointer
-				span
-					display: block
-					width: 30px
-					height: 2px
-					background: $text
-					transition: width .3s
-			&.toggled
-				.s-header__humb-icon
-					span
-						&:nth-child(3)
-							width: 26px
-		&__left
-			display: flex
-			align-items: center
-		&__social
-			margin-left: 15px
-			&-link
-				margin-right: 10px
-		&__menu-left,
-		&__menu-right,
-		&__nav li:not(.s-header__nav-logo)
-			display: none
 	.h-family
 		&__item
 			height: 360px
@@ -200,7 +158,6 @@
 				&-logo
 					margin-bottom: 15px
 				&-link
-					font-size: 14px
 					line-height: 1.35em
 	.nav
 		&-link
@@ -429,6 +386,15 @@
 				left: 30px
 			&--next
 				right: 30px
+	.s-header
+		.m-nav
+			&__family
+				&-item
+					margin: 5px 0
+				&-logo
+					display: none
+				&-link
+					line-height: 1.5em
 	.h-heroes
 		.owl-carousel_nav
 			display: none
@@ -596,13 +562,28 @@
 		&__btn
 			display: none
 		.m-nav
+			&.is-active
+				.m-nav-right:before
+					transform: translateY(0px)
+					opacity: 1
+			&-right
+				&:before
+					content: ''
+					display: block
+					width: 40px
+					height: 2px
+					margin: 30px auto 0
+					background-color: $accent
+					opacity: 0
+					transform: translateY(25px)
+					transition: opacity .3s, transform .5s
 			&__title
 				text-align: center
 			&__list
 				align-items: center
 				> li
 					margin: 0
-					margin-bottom: 5px
+					margin-bottom: 6px
 					&:last-child
 						margin-bottom: 0
 			&__family
@@ -610,9 +591,11 @@
 					display: none
 				&-item
 					align-items: center
-					margin-bottom: 10px
+					margin: 0
+					margin-bottom: 6px
+					&:last-child
+						margin-bottom: 0
 				&-link
-					font-size: 15px
 					text-align: center
 	.form
 		&-group
@@ -814,6 +797,66 @@
 				margin-bottom: 10px
 
 
+
+@media only screen and (max-width: 1140px)
+	.s-header
+		&__left,
+		&__right
+			max-width: 160px
+		&__humb
+			display: flex
+			align-items: center
+			height: 20px
+			padding: 0
+			border: 0
+			background: $trsp
+			outline: 0
+			&-icon
+				position: relative
+				display: block
+				width: 30px
+				height: 20px
+				&:hover
+					cursor: pointer
+				span
+					position: absolute
+					left: 0
+					display: block
+					width: 100%
+					height: 2px
+					background: $text
+					transition: width .3s, transform .3s
+					&:nth-child(1)
+						top: 0
+					&:nth-child(2)
+						top: 10px
+					&:nth-child(3)
+						top: 19px
+			&.toggled
+				.s-header__humb-icon
+					span
+						&:nth-child(1)
+							top: 10px
+							transform: rotate(45deg)
+							transform-origin: top center
+						&:nth-child(2)
+							width: 0
+							opacity: 0
+						&:nth-child(3)
+							top: 10px
+							transform-origin: bottom center
+							transform: rotate(-45deg)
+		&__left
+			display: flex
+			align-items: center
+		&__social
+			margin-left: 15px
+			&-link
+				margin-right: 10px
+		&__menu-left,
+		&__menu-right,
+		&__nav li:not(.s-header__nav-logo)
+			display: none
 
 @media (min-width: 992px) and (max-width: 1140px)
 	h1

@@ -68,8 +68,9 @@
 				left: 0
 				width: 280px
 				padding-top: 20px
-				transform: translate(-17px, 0)
-				transition: transform .3s, opacity .3s
+				transform: translate(-17px, 40px)
+				transition: transform .3s ease, opacity .3s ease, visibility .3s ease
+				transition-delay: 0.05s
 				visibility: hidden
 				opacity: 0
 				> li
@@ -123,12 +124,12 @@
 		background: inherit
 		transform: translate3d(0,0,0)
 		opacity: 0
-		transition: transform .3s ease, opacity .3s ease
+		transition: transform .3s, opacity .3s
 		&__wrap
 			display: flex
 			justify-content: space-between
-			padding-top: 20px
-			padding-bottom: 20px
+			padding-top: 30px
+			padding-bottom: 30px
 		&__title
 			margin-bottom: 15px
 			color: $title
@@ -141,13 +142,13 @@
 			flex-wrap: wrap
 			li
 				margin: 5px 0
-				font-size: 15px
 				a
+					border-bottom: 1px solid $trsp
+					color: $text
 					font-weight: 400
-					text-transform: uppercase
-					transition: padding .3s
+					transition: border .3s
 					&:hover
-						padding-left: 6px
+						border-bottom-color: $text
 		&__family
 			&-item
 				display: flex
@@ -158,19 +159,20 @@
 				align-items: flex-end
 				width: 70px
 				height: 40px
-				margin-bottom: 6px
+				margin-bottom: 10px
 				img
 					max-width: 60px
 					max-height: 40px
 			&-link
 				display: inline-block
 				color: $text
-				font-size: 15px
 				font-weight: 400
-				text-transform: uppercase
-				transition: padding .3s
+				span
+					border-bottom: 1px solid $trsp
+					transition: border .3s
 				&:hover
-					padding-left: 6px
+					span
+						border-bottom-color: $text
 		&.is-active
 			visibility: visible
 			transform: none

@@ -101,8 +101,7 @@
 		border: 0
 		.form-radio-label:before
 			box-shadow: 0 0 0 1px red
-	.form-check .parsley-error,
-	.form-check.parsley-error
+	.form-check .parsley-error 
 		border: 0
 		.form-check-label:before
 			box-shadow: 0 0 0 1px red
@@ -110,7 +109,6 @@
 	.form-radio ~ .parsley-errors-list,
 	.form-radio .parsley-errors-list,
 	.form-check .parsley-errors-list,
-	.form-check ~ .parsley-errors-list,
 	.form-textarea ~ .parsley-errors-list
 		display: none
 	.form-file-input.parsley-error
@@ -363,6 +361,18 @@
 	input[type=number]
 		-moz-appearance:textfield
 
+
+// Timepicker
+.ui-timepicker-wrapper
+	box-shadow: none!important
+	li.ui-timepicker-selected
+		background-color: $text
+		transition: background-color 250ms
+	.ui-timepicker-list li
+		transition: background-color 250ms, color 250ms
+		&:hover
+			background-color: $border
+			color: $text
 
 // Page Heroes customize
 .p-heroes

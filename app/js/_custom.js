@@ -119,12 +119,23 @@ $(document).ready(function(){
 	});
 
 	// Mobile navigation
-	var mNavHumb	= $('.s-header__humb');
-			mNav			= $('.m-nav');
+	$mHeader	= $('.s-header')
+	$mNavHumb	= $('.s-header__humb');
+	$mNav			= $('.m-nav');
 
-	mNavHumb.on('click', function() {
-		$(this).toggleClass('toggled')
-		mNav.toggleClass('is-active');
+	$mNavHumb.on('click', function() {
+		$('body').toggleClass('menu-open');
+		$(this).toggleClass('toggled');
+		$mNav.toggleClass('is-active');
+	});
+
+	$(document).click(function(event) { 
+		$target = $(event.target);
+		if(!$target.closest('.s-header').length && $('body.menu-open').is(":visible")) {
+			$('body').toggleClass('menu-open');
+			$mNavHumb.toggleClass('toggled');
+			$mNav.toggleClass('is-active');
+		}
 	});
 
 	// Fancybox
@@ -134,6 +145,14 @@ $(document).ready(function(){
 
 	// jQuery Inputmask
 	$(":input").inputmask();
+	$('input[id$="order-time"]').inputmask(
+		"hh:mm:ss", {
+		mask: "h:s t\m",
+		placeholder: "hh:mm xm",
+		alias: "datetime",
+		hourFormat: "12"
+		}
+	);
 	$('.form #work-form-email').inputmask({
 		mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,4}]",
 		greedy: false,
@@ -144,6 +163,7 @@ $(document).ready(function(){
 			}
 		}
 	});
+	
 	// $('.form:not(#vacancy-resume) input[type="tel"]').inputmask("+38 (999) 99-99-999", { 
 	// 	"onincomplete": function() {
 	// 		$('.form button[type=submit], .form input[type=submit]').attr('disabled', 'disabled');
