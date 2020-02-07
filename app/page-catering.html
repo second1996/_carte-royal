@@ -486,7 +486,7 @@
 			<div class="container">
 				<h2 class="section-title">Калькулятор кейтерингу</h2>
 				<div class="section-wrap">
-					<form action="#" method="POST" class="order__form form">
+					<form action="#" method="POST" class="order__form form" data-parsley-validate>
 						<div class="row">
 							<div class="form-group col-sm-6">
 								<input type="text" class="form-control form-control-icon icon-name" name="order-name" placeholder="Ваше ім&#39;я" required>
@@ -505,7 +505,7 @@
 								<div class="form-radio">
 									<div class="row">
 										<div class="col-6">
-											<input class="form-radio-input" type="radio" name="order-format[]" id="order-format-1" value="Фуршет" checked>
+											<input class="form-radio-input" type="radio" name="order-format[]" id="order-format-1" value="Фуршет" required>
 											<label class="form-radio-label" for="order-format-1">Фуршет</label>
 											<input class="form-radio-input" type="radio" name="order-format[]" id="order-format-2" value="Бенкет">
 											<label class="form-radio-label" for="order-format-2">Бенкет</label>
@@ -519,7 +519,7 @@
 											<label class="form-radio-label" for="order-format-6">Coffee-пауза</label>
 										</div><!-- /.col -->
 										<div class="col-6">
-											<input class="form-radio-input" type="radio" name="order-format[]" id="order-format-7" value="Фуршет" checked>
+											<input class="form-radio-input" type="radio" name="order-format[]" id="order-format-7" value="Фуршет" required>
 											<label class="form-radio-label" for="order-format-7">BBQ або пікнік</label>
 											<input class="form-radio-input" type="radio" name="order-format[]" id="order-format-8" value="Бенкет">
 											<label class="form-radio-label" for="order-format-8">Корпоратив</label>
@@ -538,7 +538,7 @@
 							<div class="form-group col-md-3 col-6">
 								<div class="form-title">Страви</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="order-dishes[]" id="order-dishes-1" value="Канапе" checked>
+									<input class="form-check-input" type="checkbox" name="order-dishes[]" id="order-dishes-1" value="Канапе" required>
 									<label class="form-check-label" for="order-dishes-1">Канапе</label>
 									<input class="form-check-input" type="checkbox" name="order-dishes[]" id="order-dishes-2" value="Холодні закуски">
 									<label class="form-check-label" for="order-dishes-2">Холодні закуски</label>
@@ -553,7 +553,7 @@
 							<div class="form-group col-md-3 col-6">
 								<div class="form-title">Напої</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="order-drinks[]" id="order-drinks-1" value="Безалкогольні напої" checked>
+									<input class="form-check-input" type="checkbox" name="order-drinks[]" id="order-drinks-1" value="Безалкогольні напої" required>
 									<label class="form-check-label" for="order-drinks-1">Безалкогольні напої</label>
 									<input class="form-check-input" type="checkbox" name="order-drinks[]" id="order-drinks-2" value="Алкоголь">
 									<label class="form-check-label" for="order-drinks-2">Алкоголь</label>
@@ -620,6 +620,7 @@
 	</footer>
 
 	<script src="js/scripts.min.js"></script>
+	<script src="libs/parsley/parsley.min.js"></script>
 	<script src="libs/ion.rangeSlider/ion.rangeSlider.min.js"></script>
 	<script>
 	$(".form-range-slider").ionRangeSlider({
