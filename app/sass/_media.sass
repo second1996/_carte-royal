@@ -617,16 +617,12 @@
 	.f-heroes
 		&__header
 			margin-top: -50px
-		&__social
-			&-link
-				padding: 6px 10px
 		&__nav
 			.navigation
 				&__list li
 					border: 0
 					a
 						font-size: 14px
-						// font-weight: 400
 	.h-family
 		&__title
 			white-space: normal
@@ -684,6 +680,13 @@
 		.events
 			&__slide
 				padding: 30px
+		.order
+			.social
+				&__list
+					&-link
+						padding: 12px 18px
+						&:not(:first-child)
+							margin-left: 10px
 	.family-page
 		.family
 			&__item
@@ -710,6 +713,12 @@
 					font-size: 15px
 					line-height: 1.35em
 	.family-single
+		.social
+			&__list
+				&-link
+					padding: 12px 18px
+					&:not(:first-child)
+						margin-left: 10px
 		.contacts
 			&__item
 				flex-direction: column
