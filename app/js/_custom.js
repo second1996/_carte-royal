@@ -16,7 +16,7 @@ $(document).ready(function(){
 		nav: true,
 		loop: true,
 		autoplay: true,
-		autoplayTimeout: 7500,
+		autoplayTimeout: 3000,
 		autoplayHoverPause: true,
 		navContainer: '.h-heroes__carousel-nav',
 		navText: [
