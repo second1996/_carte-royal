@@ -20,8 +20,8 @@ $(document).ready(function(){
 		autoplayHoverPause: true,
 		navContainer: '.h-heroes__carousel-nav',
 		navText: [
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>'
 		],
 		animateOut: 'fadeOut',
 		smartSpeed: 5000,
@@ -33,8 +33,8 @@ $(document).ready(function(){
 		nav: true,
 		navContainer: '.h-delivery__carousel-nav',
 		navText: [
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>'
 		],
 		dots: false,
 		animateOut: 'fadeOut',
@@ -46,8 +46,8 @@ $(document).ready(function(){
 		nav: true,
 		navContainer: '.reviews__carousel-nav',
 		navText: [
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>'
 		],
 		responsive: {
 			0: {
@@ -67,8 +67,8 @@ $(document).ready(function(){
 		nav: true,
 		dots: false,
 		navText: [
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>'
 		],
 		responsive: {
 			0: {
@@ -113,8 +113,8 @@ $(document).ready(function(){
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
 		navText: [
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>',
-			'<svg class="icon icon-arrow"><use xlink:href="../img/icons/sprite.svg#icon-arrow"></use></svg>'
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>',
+			'<svg class="icon icon-arrow"><use xlink:href="/wp-content/themes/carte-royal/assets/img/icons/sprite.svg#icon-arrow"></use></svg>'
 		],
 	});
 
