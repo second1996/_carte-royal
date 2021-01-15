@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(document).ready(function(){
+
 	$(".h-heroes__carousel").owlCarousel({
 		items: 1,
 		lazyLoad: true,
